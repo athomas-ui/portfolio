@@ -9,10 +9,10 @@ content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <header>
-<nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<nav class="tabs" role="tablist" aria-label="Portfolio sections">
+<button class="tab is-active" id="about-tab" role="tab" aria-selected="true" aria-controls="about" data-tab="about">About</button>
+<button class="tab" id="projects-tab" role="tab" aria-selected="false" aria-controls="projects" data-tab="projects">Projects</button>
+<button class="tab" id="contact-tab" role="tab" aria-selected="false" aria-controls="contact" data-tab="contact">Contact</button>
 </nav>
 </header>
 <main>
@@ -22,18 +22,33 @@ content="width=device-width, initial-scale=1.0">
 I'm an intern at i.c.stars, a nonprofit that trains adults from underserved communities for careers in technology through an intensive, project-based leadership and IT program. I'm building my skills in information security, working toward a career where I can combine technical depth with a focus on protecting systems and data.
 
 🔐 Focused on cybersecurity fundamentals and best practices
-🎓 CompTIA certified
+🎓 CompTIA certified (Network+ & Security+)
 🌱 Currently growing my hands-on project portfolio — check back soon
 🤝 Open to learning opportunities, mentorship, and collaboration
 </p>
+<a class="visit-button" href="https://github.com/athomas-ui" target="_blank" rel="noreferrer">Visit Here <span aria-hidden="true">↗</span></a>
+<div class="drum-stage" aria-label="Interactive drum kit">
+<div class="stage-lights" aria-hidden="true"></div>
+<div class="drum-heading">
+<p class="eyebrow">Hero mode: unlocked</p>
+<p class="drum-status" aria-live="polite">Ready to make some noise.</p>
+</div>
+<div class="drum-kit">
+<button class="drum-pad pad-kick" data-sound="KICK" aria-label="Kick drum, press A">A<span>Kick</span></button>
+<button class="drum-pad pad-snare" data-sound="SNARE" aria-label="Snare drum, press S">S<span>Snare</span></button>
+<button class="drum-pad pad-hat" data-sound="HAT" aria-label="Hi-hat, press D">D<span>Hi-hat</span></button>
+<button class="drum-pad pad-crash" data-sound="CRASH" aria-label="Crash cymbal, press F">F<span>Crash</span></button>
+</div>
+<p class="hit-count"><span id="hit-count">0</span> hits powered up</p>
+</div>
 </section>
-<section id="about">
+<section id="about" class="tab-panel" role="tabpanel" aria-labelledby="about-tab">
 <h2>About Me</h2>
 <p>Two or three sentences about who you are,
 what you're learning, and what you want to
 build.</p>
 </section>
-<section id="projects">
+<section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="projects-tab" hidden>
 <h2>Projects</h2>
 <div class="project">
 <h3>Project Title</h3>
@@ -44,14 +59,14 @@ build.</p>
 <p>What it does and what you built.</p>
 </div>
 </section>
-<section id="contact">
+<section id="contact" class="tab-panel" role="tabpanel" aria-labelledby="contact-tab" hidden>
 <h2>Contact</h2>
 <p>Email:
-<a href="mailto:athomas@icstars.org">you@example.com</a>
+<a href="mailto:athomas@icstars.org">athomas@icstars.org</a>
 </p>
 <p>GitHub:
 <a href="https://github.com/athomas-ui">
-github.com/yourusername</a>
+github.com/athomas-ui</a>
 </p>
 </section>
 </main>
@@ -59,6 +74,68 @@ github.com/yourusername</a>
 <p>&copy; 2026 Andrew Thomas
 </p>
 </footer>
+<script>
+const tabs = document.querySelectorAll('[role="tab"]');
+const panels = document.querySelectorAll('[role="tabpanel"]');
+const drumPads = document.querySelectorAll('.drum-pad');
+const drumStatus = document.querySelector('.drum-status');
+const hitCount = document.querySelector('#hit-count');
+let totalHits = 0;
+
+function activateTab(tabName, updateHash = true) {
+	tabs.forEach((tab) => {
+		const isActive = tab.dataset.tab === tabName;
+		tab.classList.toggle('is-active', isActive);
+		tab.setAttribute('aria-selected', isActive);
+		tab.tabIndex = isActive ? 0 : -1;
+	});
+
+	panels.forEach((panel) => {
+		panel.hidden = panel.id !== tabName;
+	});
+
+	if (updateHash) {
+		history.replaceState(null, '', `#${tabName}`);
+	}
+}
+
+tabs.forEach((tab, index) => {
+	tab.addEventListener('click', () => activateTab(tab.dataset.tab));
+	tab.addEventListener('keydown', (event) => {
+		if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+		event.preventDefault();
+		const nextIndex = event.key === 'ArrowRight'
+			? (index + 1) % tabs.length
+			: (index - 1 + tabs.length) % tabs.length;
+		tabs[nextIndex].focus();
+		activateTab(tabs[nextIndex].dataset.tab);
+	});
+});
+
+const initialTab = window.location.hash.slice(1);
+activateTab([...tabs].some((tab) => tab.dataset.tab === initialTab) ? initialTab : 'about', false);
+
+function playDrum(pad) {
+	pad.classList.remove('is-hit');
+	void pad.offsetWidth;
+	pad.classList.add('is-hit');
+	totalHits += 1;
+	hitCount.textContent = totalHits;
+	drumStatus.textContent = `${pad.dataset.sound} hit! Keep the beat heroic.`;
+}
+
+drumPads.forEach((pad) => {
+	pad.addEventListener('click', () => playDrum(pad));
+});
+
+document.addEventListener('keydown', (event) => {
+	if (event.target.matches('input, textarea, button, a')) return;
+	const keyMap = { a: 0, s: 1, d: 2, f: 3 };
+	const pad = drumPads[keyMap[event.key.toLowerCase()]];
+	if (!pad) return;
+	playDrum(pad);
+});
+</script>
 </body>
 </html>
 

@@ -1,33 +1,45 @@
 :root {
---accent: #909eb170;
---ink: #1f2933;
---muted: #6b7280;
---bg: #62aab0be;
+--accent: #ffcc33;
+--hot: #ff4f64;
+--ink: #f7f5ef;
+--muted: #b9bfd7;
+--bg: #15162e;
+--surface: #24264b;
+--electric: #4de1ff;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-font-family: system-ui, -apple-system, sans-serif;
+font-family: 'Trebuchet MS', Verdana, sans-serif;
 color: var(--ink);
 line-height: 1.6;
-background: var(--bg);
+background: radial-gradient(circle at 50% -10%, #3d316c 0, var(--bg) 45%);
+min-height: 100vh;
 }
 header {
 position: sticky;
 top: 0;
-background: var(--bg);border-bottom: 1px solid #e5e7eb;
+z-index: 2;
+background: rgba(21, 22, 46, 0.9);
+border-bottom: 1px solid #45466f;
+backdrop-filter: blur(10px);
 }
 nav {
 display: flex;
-gap: 1.5rem;
+gap: 0.5rem;
 justify-content: center;
 padding: 1rem;
 }
-nav a {
-text-decoration: none;
+nav button {
+border: 0;
+background: transparent;
 color: var(--ink);
+cursor: pointer;
 font-weight: 600;
+font: inherit;
+padding: 0.5rem 1rem;
+border-radius: 999px;
 }
-nav a:hover { color: var(--accent); }
+nav button:hover, nav button.is-active { color: var(--bg); background: var(--accent); box-shadow: 0 0 18px rgba(255, 204, 51, 0.4); }
 main {
 max-width: 720px;
 margin: 0 auto;
@@ -35,23 +47,88 @@ padding: 2rem 1.25rem;
 }
 section {
 padding: 2.5rem 0;
-border-bottom: 1px solid #f0f0f0;
+border-bottom: 1px solid #45466f;
 }
-#hero { text-align: center; padding: 4rem 0; }
-h1 { font-size: 2.5rem; }
+#hero { text-align: center; padding: 4.5rem 0 3.5rem; }
+h1 { color: var(--accent); font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1; letter-spacing: 0.03em; text-transform: uppercase; text-shadow: 4px 4px 0 var(--hot); }
 .tagline {
 color: var(--muted);
 font-size: 1.1rem;
 margin-top: 0.5rem;
 }
 h2 { margin-bottom: 1rem; color: var(--accent); }
+.visit-button {
+display: inline-flex;
+gap: 0.5rem;
+align-items: center;
+margin-top: 1.5rem;
+padding: 0.75rem 1.25rem;
+background: var(--hot);
+color: var(--ink);
+text-decoration: none;
+font-weight: 700;
+border-radius: 6px;
+transition: transform 160ms ease, background 160ms ease;
+}
+.visit-button:hover { background: var(--accent); color: var(--bg); transform: translateY(-2px); }
+.drum-stage {
+position: relative;
+overflow: hidden;
+margin-top: 2.5rem;
+padding: 1.5rem;
+background: rgba(36, 38, 75, 0.9);
+border: 1px solid #5c5f91;
+border-radius: 14px;
+box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+.stage-lights {
+position: absolute;
+inset: 0;
+background: linear-gradient(115deg, transparent 30%, rgba(77, 225, 255, 0.13), transparent 65%);
+animation: sweep 4s ease-in-out infinite;
+pointer-events: none;
+}
+.drum-heading, .drum-kit, .hit-count { position: relative; z-index: 1; }
+.eyebrow { color: var(--electric); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+.drum-status { color: var(--muted); font-size: 0.9rem; }
+.drum-kit { display: flex; justify-content: center; align-items: center; gap: 0.8rem; margin: 1.5rem 0 1rem; }
+.drum-pad {
+width: 74px;
+height: 74px;
+border: 3px solid var(--electric);
+border-radius: 50%;
+background: var(--surface);
+color: var(--ink);
+cursor: pointer;
+font: 700 1.35rem 'Trebuchet MS', sans-serif;
+box-shadow: inset 0 0 0 7px rgba(77, 225, 255, 0.12), 0 7px 0 #111226;
+transition: transform 100ms ease, box-shadow 100ms ease;
+}
+.drum-pad span { display: block; color: var(--muted); font-size: 0.58rem; text-transform: uppercase; }
+.pad-snare { border-color: var(--hot); }
+.pad-hat { border-color: var(--accent); }
+.pad-crash { border-color: #b57dff; }
+.drum-pad:hover, .drum-pad:focus-visible { transform: translateY(-4px); outline: none; }
+.drum-pad.is-hit { animation: drum-hit 220ms ease-out; }
+.hit-count { color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .project {
 padding: 1rem;
-border: 1px solid #e5e7eb;border-radius: 8px;
+background: var(--surface);
+border: 1px solid #5c5f91;
+border-radius: 8px;
 margin-bottom: 1rem;
 }
+[hidden] { display: none; }
 footer {
 text-align: center;
 padding: 2rem;
 color: var(--muted);
+}
+@keyframes sweep { 0%, 100% { transform: translateX(-35%); } 50% { transform: translateX(35%); } }
+@keyframes drum-hit { 50% { transform: scale(0.88) rotate(-4deg); box-shadow: 0 0 28px var(--accent), inset 0 0 0 7px rgba(255, 255, 255, 0.25); } }
+@media (max-width: 520px) {
+nav { padding: 0.75rem 0.5rem; }
+nav button { padding: 0.45rem 0.75rem; }
+.drum-kit { gap: 0.35rem; }
+.drum-pad { width: 65px; height: 65px; }
 }
