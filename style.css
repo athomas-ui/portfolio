@@ -137,7 +137,11 @@ transition: transform 100ms ease, box-shadow 100ms ease;
 .personal-story h3 { margin-bottom: 0.65rem; font-size: 1.65rem; line-height: 1; }
 .personal-lead h3 { font-size: 2.2rem; }
 .pull-quote, .family-note { margin-top: 1.25rem; padding-top: 0.75rem; border-top: 1px solid var(--ink); color: var(--accent); font-size: 1.15rem; font-style: italic; }
-.resume-paper { background: rgba(245, 238, 223, 0.35); }
+.resume-paper {
+background: rgba(245, 238, 223, 0.35);
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.resume-paper .section-heading { display: block; text-align: center; }
 .resume-header { display: flex; justify-content: space-between; align-items: end; gap: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--ink); }
 .resume-kicker { color: var(--accent); font-size: 1.4rem; font-weight: 700; }
 .resume-role { color: var(--muted); font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase; }
