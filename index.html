@@ -10,12 +10,25 @@ content="width=device-width, initial-scale=1.0">
 <body>
 <header>
 <nav class="tabs" role="tablist" aria-label="Portfolio sections">
-<button class="tab is-active" id="resume-tab" role="tab" aria-selected="true" aria-controls="resume" data-tab="resume">Resume</button>
+<div class="tab-track">
+<span class="track-label">Professional</span>
+<button class="tab is-active" id="overview-tab" role="tab" aria-selected="true" aria-controls="overview" data-tab="overview">Overview</button>
+<button class="tab" id="resume-tab" role="tab" aria-selected="false" aria-controls="resume" data-tab="resume">Resume</button>
 <button class="tab" id="projects-tab" role="tab" aria-selected="false" aria-controls="projects" data-tab="projects">Projects</button>
 <button class="tab" id="skills-tab" role="tab" aria-selected="false" aria-controls="skills" data-tab="skills">Skills</button>
-<button class="tab" id="overview-tab" role="tab" aria-selected="false" aria-controls="overview" data-tab="overview">Overview</button>
+</div>
+<div class="tab-track">
+<span class="track-label">Program Journey</span>
+<button class="tab" id="leadership-tab" role="tab" aria-selected="false" aria-controls="leadership" data-tab="leadership">Leadership</button>
+<button class="tab" id="business-tab" role="tab" aria-selected="false" aria-controls="business" data-tab="business">Business</button>
+<button class="tab" id="career-planning-tab" role="tab" aria-selected="false" aria-controls="career-planning" data-tab="career-planning">Career Planning</button>
+<button class="tab" id="wellness-tab" role="tab" aria-selected="false" aria-controls="wellness" data-tab="wellness">Wellness</button>
+</div>
+<div class="tab-track">
+<span class="track-label">Personal</span>
 <button class="tab" id="about-me-tab" role="tab" aria-selected="false" aria-controls="about-me" data-tab="about-me">About Me</button>
 <button class="tab" id="music-showcase-tab" role="tab" aria-selected="false" aria-controls="music-showcase" data-tab="music-showcase">Music Showcase</button>
+</div>
 </nav>
 </header>
 <main>
@@ -41,6 +54,7 @@ content="width=device-width, initial-scale=1.0">
 <div class="profile-links" aria-label="Professional profiles">
 <a class="visit-button" href="https://github.com/athomas-ui" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
 <a class="visit-button" href="https://www.linkedin.com/in/andrew-thomas-83564259" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+<a class="visit-button" href="https://canva.link/5iaf0i10dwoj9xg" target="_blank" rel="noreferrer">Download Resume <span aria-hidden="true">↓</span></a>
 </div>
 </section>
 <section id="resume" class="tab-panel resume-paper" role="tabpanel" aria-labelledby="resume-tab">
@@ -72,7 +86,7 @@ content="width=device-width, initial-scale=1.0">
 </div>
 <div class="resume-experience">
 <div class="resume-subheading"><p class="story-label">Experience</p><h3>Professional History</h3></div>
-<article class="experience-entry"><div class="experience-heading"><h4>Intern <span>i.c.stars</span></h4><p>Chicago, IL | Aug 2026 - Dec 2026 (Cycle 60)</p></div><ul class="bullet-list"><li>Completing an intensive technology internship combining hands-on coding and technical training with real-world client consulting.</li><li>Consulting on the Medline OPN 2026 project as part of a cohort-based technical team, applying new coding and technical skills to a live client engagement.</li></ul></article>
+<article class="experience-entry"><div class="experience-heading"><h4>Intern <span>i.c.stars</span></h4><p>Chicago, IL | Aug 2026 - Dec 2026 (Cycle 60)</p></div><ul class="bullet-list"><li>Completing an intensive technology internship combining hands-on coding and technical training with real-world client consulting.</li><li>Consulting on a confidential client engagement as part of a cohort-based technical team, applying new coding and technical skills to a live business project.</li></ul></article>
 <article class="experience-entry"><div class="experience-heading"><h4>Program Manager <span>YMCA of Metropolitan Chicago</span></h4><p>Chicago, IL | Nov 2018 - Aug 2026</p></div><ul class="bullet-list"><li>Monitor program data, track attendance, and report outcomes to executive leadership and funding partners, ensuring accuracy and compliance with grant requirements.</li><li>Oversee technology access and digital learning systems for 100+ students, coordinating secure remote and on-site program logistics.</li><li>Manage program budget and expenses; hire, train, evaluate, and supervise staff, scheduling to ensure proper coverage.</li><li>Partner with school administration and community organizations to deliver grant-funded initiatives, workshops, and special events.</li><li>Recognized: Verizon Innovation Education Cohort Recipient; Community Schools Initiative Coordinator of the Year.</li></ul></article>
 <article class="experience-entry"><div class="experience-heading"><h4>Admin Project Coordinator <span>Prevention Partnership</span></h4><p>Chicago, IL | Mar 2021 - Aug 2023</p></div><ul class="bullet-list"><li>Drafted program documentation and reporting for grant-funded initiatives, ensuring compliance with government and institutional standards.</li><li>Coordinated daily operations of prevention and public health programs serving Chicago families.</li><li>Facilitated community workshops focused on youth development and digital safety.</li><li>Supported HR functions including new-hire orientation, document filing, and inventory procurement.</li></ul></article>
 <article class="experience-entry"><div class="experience-heading"><h4>STEM Program Instructor (Contractor) <span>NextWave STEM Inc.</span></h4><p>Chicago, IL | Jan 2021 - Sept 2023</p></div><ul class="bullet-list"><li>Delivered hands-on instruction in cybersecurity, drone coding, robotics, 3D printing, and AI programs to advanced learners.</li><li>Promoted digital safety and responsible technology usage in classroom settings.</li><li>Designed and implemented internet-safety and technology-literacy workshops as part of the curriculum.</li></ul></article>
@@ -101,6 +115,108 @@ content="width=device-width, initial-scale=1.0">
 </article>
 </div>
 </section>
+<section id="leadership" class="tab-panel journey-paper" role="tabpanel" aria-labelledby="leadership-tab" hidden>
+<div class="section-heading">
+<p class="section-label">Program Journey / Leadership</p>
+<h2>Leadership</h2>
+</div>
+<div class="about-columns">
+<article class="about-column about-lead">
+<h3>Lead With Clarity</h3>
+<p>I connect people, priorities, and technical work. In team environments, I help turn many perspectives into one accountable direction.</p>
+</article>
+<article class="about-column">
+<h3>Build Trust</h3>
+<p>My leadership style is grounded in communication, delegation, follow-through, and making space for every contributor to do strong work.</p>
+</article>
+<article class="about-column">
+<h3>Deliver Together</h3>
+<p>From program management to client consulting, I keep teams focused on the outcome, the audience, and the next decision.</p>
+</article>
+</div>
+<article class="leadership-feature">
+<p class="story-label">Tea Host</p>
+<h3>Mission-Led Leadership</h3>
+<p>I hosted Yemi Akisanya, Axon&#39;s People &amp; Culture leader, for a high tea conversation about global employee experience, JEDI, learning, philanthropy, and the systems that help people thrive. What stayed with me was Axon&#39;s mission to reduce gun-related deaths by giving communities a non-lethal option. It reinforced a principle I bring to security and GRC: protect the people a system touches, then build the culture and evidence to prove it.</p>
+</article>
+<article class="leadership-feature">
+<p class="story-label">Tea Debriefs</p>
+<h3>Six Lines I Carry Forward</h3>
+<div class="quote-grid">
+<blockquote>&quot;Perseverance, grit, resilience, and determination.&quot;<cite>JV</cite></blockquote>
+<blockquote>&quot;Am I going to be Pat, or am I going to be JV?&quot;<cite>JV</cite></blockquote>
+<blockquote>&quot;Make the world better today.&quot;<cite>Marc D.</cite></blockquote>
+<blockquote>&quot;Learn, master, teach.&quot;<cite>Kevin Gates</cite></blockquote>
+<blockquote>&quot;Presence, passion, skills.&quot;<cite>Kevin Gates</cite></blockquote>
+<blockquote>&quot;An L is nothing but a lesson.&quot;<cite>Kevin Gates</cite></blockquote>
+</div>
+<p class="debrief-thread">Six quotes, four people, one thread: decide who you are before the room decides for you.</p>
+</article>
+<article class="leadership-feature">
+<h3>Minister of Music &mdash; Leading the Musical Staff</h3>
+<p>At Greater New St James, I lead three choirs directly: Men&#39;s, Young Adult, and Combined. Each week I select the music, prepare lyrics and reference recordings, and send a message that sets the tone before Sunday. This is leadership through preparation: creating alignment, readiness, and purpose before anyone sees me step forward.</p>
+</article>
+</section>
+<section id="business" class="tab-panel journey-paper" role="tabpanel" aria-labelledby="business-tab" hidden>
+<div class="section-heading">
+<p class="section-label">Program Journey / Business Acumen</p>
+<h2>Business</h2>
+</div>
+<div class="about-columns">
+<article class="about-column about-lead">
+<h3>Translate Risk Into Action</h3>
+<p>I bring an operations mindset to technology: understand the business problem, document the risk, and recommend a path people can actually use.</p>
+</article>
+<article class="about-column">
+<h3>Client-Ready Thinking</h3>
+<p>My experience spans stakeholder engagement, grant compliance, budgeting, resource allocation, and presenting technical direction to non-technical audiences.</p>
+</article>
+<article class="about-column">
+<h3>Value With Accountability</h3>
+<p>I measure strong work by whether it is clear, defensible, practical, and aligned to the organization it serves.</p>
+</article>
+</div>
+</section>
+<section id="career-planning" class="tab-panel journey-paper" role="tabpanel" aria-labelledby="career-planning-tab" hidden>
+<div class="section-heading">
+<p class="section-label">Program Journey / Career Direction</p>
+<h2>Career Planning</h2>
+</div>
+<div class="about-columns">
+<article class="about-column about-lead">
+<h3>Next Target</h3>
+<p>I am pursuing entry-level GRC and cybersecurity analyst roles where I can apply security fundamentals, documentation discipline, and operational judgment.</p>
+</article>
+<article class="about-column">
+<h3>Build the Foundation</h3>
+<p>I am completing my Associate of Science in Computer Science with a concentration in cybersecurity and continuing to grow through hands-on client work.</p>
+</article>
+<article class="about-column">
+<h3>Keep Advancing</h3>
+<p>My development path includes deeper analyst experience, CySA+ preparation, and eventually the ISC2 CGRC credential.</p>
+</article>
+</div>
+</section>
+<section id="wellness" class="tab-panel journey-paper" role="tabpanel" aria-labelledby="wellness-tab" hidden>
+<div class="section-heading">
+<p class="section-label">Program Journey / Sustainable Growth</p>
+<h2>Wellness</h2>
+</div>
+<div class="about-columns">
+<article class="about-column about-lead">
+<h3>Stay Grounded</h3>
+<p>Sustainable performance starts with making room for reflection, relationships, creativity, and recovery alongside the work.</p>
+</article>
+<article class="about-column">
+<h3>Find the Rhythm</h3>
+<p>Music, ministry, and time away from the screen help me return to technical challenges with focus and perspective.</p>
+</article>
+<article class="about-column">
+<h3>Grow With Intention</h3>
+<p>I want a career that is ambitious and durable: one that protects my energy while giving my skills room to compound.</p>
+</article>
+</div>
+</section>
 <section id="overview" class="tab-panel" role="tabpanel" aria-labelledby="overview-tab">
 <div class="section-heading">
 <p class="section-label">Page 02 / The Profile</p>
@@ -114,18 +230,12 @@ content="width=device-width, initial-scale=1.0">
 </article>
 <article class="about-column">
 <h3>On The Beat</h3>
-<p>Right now I&#39;m in Cycle 60 at i.c.stars, an intensive Chicago technology internship that pairs hands-on coding and technical training with real client work. My cohort is consulting on the Medline OPN 2026 project, which means I&#39;m applying what I&#39;m learning to an actual business engagement rather than a classroom exercise - the difference between studying security and practicing it. Alongside the internship, I&#39;m finishing my AS in Computer Science and working toward the ISC2 Certified in Cybersecurity credential, so this stretch of the year is deliberately dense: coursework, client deliverables, and certification study running in parallel.</p>
+<p>Right now I&#39;m in Cycle 60 at i.c.stars, an intensive Chicago technology internship that pairs hands-on coding and technical training with real client work. My cohort is consulting on a confidential client engagement, which means I&#39;m applying what I&#39;m learning to an actual business environment rather than a classroom exercise - the difference between studying security and practicing it. Alongside the internship, I&#39;m finishing my AS in Computer Science and working toward the ISC2 Certified in Cybersecurity credential, so this stretch of the year is deliberately dense: coursework, client deliverables, and certification study running in parallel.</p>
 </article>
 <article class="about-column">
 <h3>What Comes Next</h3>
 <p>Cycle 60 wraps December 4th, and I&#39;m using it as a launch point, not a finish line. My near-term plan is to finish my AS degree, add CompTIA CySA+ once I&#39;m working in an analyst seat, and eventually pursue the ISC2 CGRC - the credential that most directly matches where I want to end up. I&#39;m targeting entry-level GRC and cybersecurity analyst roles in Chicago, particularly at organizations in healthcare, financial services, and logistics, where the compliance and documentation instincts I built managing grant-funded programs are as valuable as the technical skills I&#39;m building now. Longer term, I want to be the kind of analyst who can sit in a room with both engineers and executives and translate for both - that&#39;s the gap I&#39;ve been closing my whole career without knowing it had a job title.</p>
 </article>
-</div>
-<div class="overview-contact">
-<p class="story-label">Connect With Me</p>
-<h3>Let&#39;s Build What Comes Next</h3>
-<p>Email: <a href="mailto:athomas@icstars.org">athomas@icstars.org</a></p>
-<p>GitHub: <a href="https://github.com/athomas-ui" target="_blank" rel="noreferrer">github.com/athomas-ui</a></p>
 </div>
 </section>
 <section id="about-me" class="tab-panel personal-paper" role="tabpanel" aria-labelledby="about-me-tab" hidden>
@@ -164,26 +274,7 @@ content="width=device-width, initial-scale=1.0">
 <p class="section-label">Page 04 / Rhythm &amp; Repertoire</p>
 <h2>Rhythm &amp; Repertoire</h2>
 </div>
-<p class="paper-intro">A showcase of the stages, services, bands, and artists shaped by my work behind the kit.</p>
-<div class="personal-columns">
-<article class="personal-story personal-lead">
-<p class="story-label">Ministry in Motion</p>
-<h3>Worship &amp; Production Leadership</h3>
-<p>My musical foundation began in church, where I grew up worshiping, playing percussion and drums, directing, and singing in the choir through age 18. I then served with Christ Centered Ministries and now serve as Minister of Music at Greater New St James, leading musical direction while managing sound and AV production.</p>
-<ul class="bullet-list">
-<li>Worship leadership and musical direction</li>
-<li>Drums, percussion, vocals, and choir direction</li>
-<li>Sound engineering and AV production</li>
-</ul>
-</article>
-<article class="personal-story">
-<p class="story-label">Stage Credits</p>
-<h3>Bands &amp; Artists</h3>
-<p>I have performed with Sonic Healing and The Cosmic Jaywalkers, adapting my playing to each band's sound, set, and live environment. I have also performed with artists throughout the city, including Mimi on the Mic, Jade the Ivy, Lauren Hall, and many more.</p>
-<p class="pull-quote">&quot;Bring the pocket. Elevate the room.&quot;</p>
-<a class="visit-button music-link" href="https://cosmicjaywalkers.com/" target="_blank" rel="noreferrer">Explore The Cosmic Jaywalkers <span aria-hidden="true">↗</span></a>
-</article>
-</div>
+<p class="paper-intro">A visual showcase of my work behind the kit.</p>
 <div class="performance-gallery">
 <figure class="performance-feature">
 <img src="media/church-drums-01.heic" alt="Andrew Thomas performing on drums" loading="lazy">
@@ -204,6 +295,25 @@ Your browser does not support video playback.
 </video>
 <figcaption><strong>See It in Action</strong><span>A live performance moment from behind the kit.</span></figcaption>
 </figure>
+</div>
+<div class="personal-columns music-details">
+<article class="personal-story personal-lead">
+<p class="story-label">Ministry in Motion</p>
+<h3>Worship &amp; Production Leadership</h3>
+<p>Raised in worship, I began with percussion, drums, choir, and musical direction. Today I serve as Minister of Music at Greater New St James, leading worship while running sound and AV.</p>
+<ul class="bullet-list">
+<li>Worship leadership</li>
+<li>Drums, percussion, vocals</li>
+<li>Sound and AV production</li>
+</ul>
+</article>
+<article class="personal-story">
+<p class="story-label">Stage Credits</p>
+<h3>Bands &amp; Artists</h3>
+<p>Performed with Sonic Healing, The Cosmic Jaywalkers, Mimi on the Mic, Jade the Ivy, Lauren Hall, and artists across the city.</p>
+<p class="pull-quote">&quot;Bring the pocket. Elevate the room.&quot;</p>
+<a class="visit-button music-link" href="https://cosmicjaywalkers.com/" target="_blank" rel="noreferrer">Explore The Cosmic Jaywalkers <span aria-hidden="true">↗</span></a>
+</article>
 </div>
 </section>
 <section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="projects-tab" hidden>
@@ -248,6 +358,7 @@ Your browser does not support video playback.
 </div>
 </main>
 <footer>
+<a class="visit-button footer-contact" href="mailto:athomas@icstars.org">Email Me <span aria-hidden="true">↗</span></a>
 <p>&copy; 2026 Andrew Thomas
 </p>
 </footer>
@@ -290,7 +401,7 @@ tabs.forEach((tab, index) => {
 });
 
 const initialTab = window.location.hash.slice(1);
-activateTab([...tabs].some((tab) => tab.dataset.tab === initialTab) ? initialTab : 'resume', false);
+activateTab([...tabs].some((tab) => tab.dataset.tab === initialTab) ? initialTab : 'overview', false);
 
 function playDrum(pad) {
 	pad.classList.remove('is-hit');
