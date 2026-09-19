@@ -11,12 +11,11 @@ content="width=device-width, initial-scale=1.0">
 <header>
 <nav class="tabs" role="tablist" aria-label="Portfolio sections">
 <button class="tab is-active" id="resume-tab" role="tab" aria-selected="true" aria-controls="resume" data-tab="resume">Resume</button>
+<button class="tab" id="projects-tab" role="tab" aria-selected="false" aria-controls="projects" data-tab="projects">Projects</button>
+<button class="tab" id="skills-tab" role="tab" aria-selected="false" aria-controls="skills" data-tab="skills">Skills</button>
 <button class="tab" id="overview-tab" role="tab" aria-selected="false" aria-controls="overview" data-tab="overview">Overview</button>
 <button class="tab" id="about-me-tab" role="tab" aria-selected="false" aria-controls="about-me" data-tab="about-me">About Me</button>
 <button class="tab" id="music-showcase-tab" role="tab" aria-selected="false" aria-controls="music-showcase" data-tab="music-showcase">Music Showcase</button>
-<button class="tab" id="performance-tab" role="tab" aria-selected="false" aria-controls="performance" data-tab="performance">Performance</button>
-<button class="tab" id="projects-tab" role="tab" aria-selected="false" aria-controls="projects" data-tab="projects">Projects</button>
-<button class="tab" id="contact-tab" role="tab" aria-selected="false" aria-controls="contact" data-tab="contact">Contact</button>
 </nav>
 </header>
 <main>
@@ -82,6 +81,26 @@ content="width=device-width, initial-scale=1.0">
 </div>
 <div class="education-entry"><div><p class="story-label">Education</p><h3>Associate of Science - Computer Science</h3></div><p>Concentration in Cybersecurity<br><strong>City Colleges of Chicago</strong><br>In Progress, expected 2026</p></div>
 </section>
+<section id="skills" class="tab-panel" role="tabpanel" aria-labelledby="skills-tab" hidden>
+<div class="section-heading">
+<p class="section-label">Page 03 / Core Capabilities</p>
+<h2>Skills</h2>
+</div>
+<div class="about-columns">
+<article class="about-column about-lead">
+<h3>Security &amp; Risk</h3>
+<ul class="bullet-list"><li>Network Security &amp; Firewalls</li><li>Risk &amp; Compliance Documentation</li><li>Data Monitoring &amp; Reporting</li><li>Security Awareness Training</li></ul>
+</article>
+<article class="about-column">
+<h3>Operations</h3>
+<ul class="bullet-list"><li>Troubleshooting &amp; Help Desk Support</li><li>Program &amp; Project Coordination</li><li>Budgeting &amp; Resource Allocation</li><li>Stakeholder Engagement</li></ul>
+</article>
+<article class="about-column">
+<h3>Tools</h3>
+<p class="tool-list">FortiGate, Wireshark, Packet Tracer, Microsoft 365, Salesforce, Slack, Google Workspace, Excel, PowerPoint, Word, Canva, Zoom</p>
+</article>
+</div>
+</section>
 <section id="overview" class="tab-panel" role="tabpanel" aria-labelledby="overview-tab">
 <div class="section-heading">
 <p class="section-label">Page 02 / The Profile</p>
@@ -101,6 +120,12 @@ content="width=device-width, initial-scale=1.0">
 <h3>What Comes Next</h3>
 <p>Cycle 60 wraps December 4th, and I&#39;m using it as a launch point, not a finish line. My near-term plan is to finish my AS degree, add CompTIA CySA+ once I&#39;m working in an analyst seat, and eventually pursue the ISC2 CGRC - the credential that most directly matches where I want to end up. I&#39;m targeting entry-level GRC and cybersecurity analyst roles in Chicago, particularly at organizations in healthcare, financial services, and logistics, where the compliance and documentation instincts I built managing grant-funded programs are as valuable as the technical skills I&#39;m building now. Longer term, I want to be the kind of analyst who can sit in a room with both engineers and executives and translate for both - that&#39;s the gap I&#39;ve been closing my whole career without knowing it had a job title.</p>
 </article>
+</div>
+<div class="overview-contact">
+<p class="story-label">Connect With Me</p>
+<h3>Let&#39;s Build What Comes Next</h3>
+<p>Email: <a href="mailto:athomas@icstars.org">athomas@icstars.org</a></p>
+<p>GitHub: <a href="https://github.com/athomas-ui" target="_blank" rel="noreferrer">github.com/athomas-ui</a></p>
 </div>
 </section>
 <section id="about-me" class="tab-panel personal-paper" role="tabpanel" aria-labelledby="about-me-tab" hidden>
@@ -159,13 +184,6 @@ content="width=device-width, initial-scale=1.0">
 <a class="visit-button music-link" href="https://cosmicjaywalkers.com/" target="_blank" rel="noreferrer">Explore The Cosmic Jaywalkers <span aria-hidden="true">↗</span></a>
 </article>
 </div>
-</section>
-<section id="performance" class="tab-panel performance-paper" role="tabpanel" aria-labelledby="performance-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Page 05 / Performance in Motion</p>
-<h2>Performance in Motion</h2>
-</div>
-<p class="paper-intro">A visual record of the rhythm, leadership, and energy I bring to worship and live performance.</p>
 <div class="performance-gallery">
 <figure class="performance-feature">
 <img src="media/church-drums-01.heic" alt="Andrew Thomas performing on drums" loading="lazy">
@@ -189,25 +207,30 @@ Your browser does not support video playback.
 </div>
 </section>
 <section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="projects-tab" hidden>
+<div class="section-heading">
+<p class="section-label">Page 02 / Selected Work</p>
 <h2>Projects</h2>
-<div class="project">
-<h3>Project Title</h3>
-<p>What it does and what you built.</p>
 </div>
-<div class="project">
-<h3>Project Title</h3>
-<p>What it does and what you built.</p>
+<article class="project project-card">
+<h3 class="project-title">Confidential Client Solution Proposal</h3>
+<p class="project-role"><strong>Role:</strong> Team Lead / Full Stack Contributor &amp; Client Bridge &mdash; All Stars Associates (i.c.stars Cycle 60)</p>
+<p class="project-summary">Led the client-facing translation of a confidential healthcare-sector RFP into a technical solution proposal as part of a five-person consulting team. Built hands-on across the full stack under a collective ownership model while helping shape a secure, scalable concept aligned to the client&#39;s operational goals.</p>
+<ul class="project-highlights">
+<li>Served as &quot;The Bridge,&quot; aligning product, engineering, data, infrastructure, and security perspectives into one coherent client narrative.</li>
+<li>Contributed across the full stack and helped evaluate scalable implementation approaches within a cross-functional team model.</li>
+<li>Owned team delegation and presentation strategy, then co-presented the solution proposal, technical direction, and delivery roadmap.</li>
+<li>Ran the team through a four-phase decision process: Understand, Brainstorm, Analyze, Decide, keeping technical direction accountable under deadline pressure.</li>
+</ul>
+<div class="project-tech-stack">
+<span class="tech-tag">Full Stack Development</span>
+<span class="tech-tag">Cloud Architecture</span>
+<span class="tech-tag">Data &amp; AI Strategy</span>
+<span class="tech-tag">Security Planning</span>
+<span class="tech-tag">Client Consulting</span>
+<span class="tech-tag">Agile/Scrum</span>
 </div>
-</section>
-<section id="contact" class="tab-panel" role="tabpanel" aria-labelledby="contact-tab" hidden>
-<h2>Contact</h2>
-<p>Email:
-<a href="mailto:athomas@icstars.org">athomas@icstars.org</a>
-</p>
-<p>GitHub:
-<a href="https://github.com/athomas-ui">
-github.com/athomas-ui</a>
-</p>
+<p class="project-meta"><strong>Engagement:</strong> Confidential healthcare-sector client <span aria-hidden="true">|</span> <strong>Program:</strong> i.c.stars Cycle 60</p>
+</article>
 </section>
 <div class="drum-stage" aria-label="Interactive drum kit">
 <div class="stage-lights" aria-hidden="true"></div>

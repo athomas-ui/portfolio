@@ -187,6 +187,14 @@ border: 1px solid var(--ink);
 border-radius: 0;
 margin-bottom: 1rem;
 }
+.project-title { color: var(--ink); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.1; }
+.project-role { margin-top: 0.8rem; color: var(--accent); font-size: 0.9rem; }
+.project-summary { max-width: 780px; margin-top: 1rem; color: var(--muted); }
+.project-highlights { margin: 1rem 0 0; padding-left: 1.25rem; color: var(--muted); }
+.project-highlights li { margin-bottom: 0.6rem; }
+.project-tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+.tech-tag { padding: 0.3rem 0.55rem; border: 1px solid var(--electric); color: var(--electric); font-size: 0.75rem; font-weight: 700; }
+.project-meta { margin-top: 1.25rem; padding-top: 0.8rem; border-top: 1px solid var(--ink); color: var(--muted); font-size: 0.82rem; }
 .performance-paper { background: rgba(245, 238, 223, 0.35); }
 .performance-gallery {
 display: grid;
