@@ -33,6 +33,7 @@ flex-wrap: wrap;
 padding: 1rem;
 }
 .tab-track {
+position: relative;
 display: flex;
 align-items: center;
 gap: 0.2rem;
@@ -41,12 +42,41 @@ border-right: 1px solid var(--muted);
 }
 .tab-track:last-child { padding-right: 0; border-right: 0; }
 .track-label {
+display: inline-flex;
+align-items: center;
+gap: 0.35rem;
 color: var(--accent);
+background: var(--surface);
+border: 1px solid var(--accent);
+cursor: pointer;
+font: inherit;
 font-size: 0.62rem;
 font-weight: 700;
 letter-spacing: 0.1em;
+padding: 0.5rem 0.75rem;
 text-transform: uppercase;
 }
+.track-label:hover, .track-label:focus-visible {
+color: var(--surface);
+background: var(--accent);
+outline: 2px solid var(--hot);
+outline-offset: 2px;
+}
+.track-toggle span { font-size: 0.8rem; transition: transform 160ms ease; }
+.tab-track.is-open .track-toggle span { transform: rotate(180deg); }
+.tab-menu {
+display: none;
+position: absolute;
+top: calc(100% + 0.55rem);
+left: 0;
+z-index: 3;
+min-width: 11rem;
+padding: 0.35rem;
+background: var(--surface);
+border: 1px solid var(--ink);
+box-shadow: 5px 5px 0 var(--hot);
+}
+.tab-track.is-open .tab-menu { display: grid; }
 nav button {
 border: 0;
 background: transparent;
@@ -58,6 +88,7 @@ padding: 0.5rem 1rem;
 border-radius: 999px;
 }
 nav button:hover, nav button.is-active { color: var(--surface); background: var(--accent); box-shadow: none; }
+.tab-menu .tab { width: 100%; border-radius: 3px; text-align: left; white-space: nowrap; }
 main {
 max-width: 1000px;
 margin: 0 auto;
@@ -273,7 +304,8 @@ nav { padding: 0.75rem 0.5rem; }
 nav button { padding: 0.45rem 0.75rem; }
 .tab-track { width: 100%; justify-content: center; padding-right: 0; border-right: 0; border-bottom: 1px solid var(--muted); padding-bottom: 0.35rem; }
 .tab-track:last-child { border-bottom: 0; padding-bottom: 0; }
-.track-label { min-width: 7.5rem; text-align: right; }
+.track-label { min-width: 7.5rem; justify-content: center; text-align: right; }
+.tab-menu { top: calc(100% - 0.1rem); left: 50%; transform: translateX(-50%); }
 .paper-meta { font-size: 0.56rem; }
 .paper-meta span:last-child { display: none; }
 .profile-header { grid-template-columns: 120px 1fr; gap: 1.25rem; margin-top: 1.5rem; }

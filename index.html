@@ -11,21 +11,24 @@ content="width=device-width, initial-scale=1.0">
 <header>
 <nav class="tabs" role="tablist" aria-label="Portfolio sections">
 <div class="tab-track">
-<span class="track-label">Professional</span>
+<button class="track-label track-toggle" type="button" aria-expanded="false" aria-controls="professional-menu">Professional <span aria-hidden="true">▾</span></button>
+<div class="tab-menu" id="professional-menu">
 <button class="tab is-active" id="overview-tab" role="tab" aria-selected="true" aria-controls="overview" data-tab="overview">Overview</button>
 <button class="tab" id="resume-tab" role="tab" aria-selected="false" aria-controls="resume" data-tab="resume">Resume</button>
 <button class="tab" id="projects-tab" role="tab" aria-selected="false" aria-controls="projects" data-tab="projects">Projects</button>
 <button class="tab" id="skills-tab" role="tab" aria-selected="false" aria-controls="skills" data-tab="skills">Skills</button>
 </div>
 <div class="tab-track">
-<span class="track-label">Program Journey</span>
+<button class="track-label track-toggle" type="button" aria-expanded="false" aria-controls="journey-menu">Program Journey <span aria-hidden="true">▾</span></button>
+<div class="tab-menu" id="journey-menu">
 <button class="tab" id="leadership-tab" role="tab" aria-selected="false" aria-controls="leadership" data-tab="leadership">Leadership</button>
 <button class="tab" id="business-tab" role="tab" aria-selected="false" aria-controls="business" data-tab="business">Business</button>
 <button class="tab" id="career-planning-tab" role="tab" aria-selected="false" aria-controls="career-planning" data-tab="career-planning">Career Planning</button>
 <button class="tab" id="wellness-tab" role="tab" aria-selected="false" aria-controls="wellness" data-tab="wellness">Wellness</button>
 </div>
 <div class="tab-track">
-<span class="track-label">Personal</span>
+<button class="track-label track-toggle" type="button" aria-expanded="false" aria-controls="personal-menu">Personal <span aria-hidden="true">▾</span></button>
+<div class="tab-menu" id="personal-menu">
 <button class="tab" id="about-me-tab" role="tab" aria-selected="false" aria-controls="about-me" data-tab="about-me">About Me</button>
 <button class="tab" id="music-showcase-tab" role="tab" aria-selected="false" aria-controls="music-showcase" data-tab="music-showcase">Music Showcase</button>
 </div>
@@ -213,7 +216,7 @@ content="width=device-width, initial-scale=1.0">
 </article>
 <article class="about-column">
 <h3>Grow With Intention</h3>
-<p>I want a career that is ambitious and durable: one that protects my energy while giving my skills room to compound.</p>
+<p>I want a career that was about to be but I love chicken too much  ambitious and durable: one that protects my energy while giving my skills room to compound.</p>
 </article>
 </div>
 </section>
@@ -384,6 +387,11 @@ function activateTab(tabName, updateHash = true) {
 	if (updateHash) {
 		history.replaceState(null, '', `#${tabName}`);
 	}
+
+	document.querySelectorAll('.tab-track.is-open').forEach((track) => {
+		track.classList.remove('is-open');
+		track.querySelector('.track-toggle').setAttribute('aria-expanded', 'false');
+	});
 }
 
 tabs.forEach((tab, index) => {
@@ -396,6 +404,39 @@ tabs.forEach((tab, index) => {
 			: (index - 1 + tabs.length) % tabs.length;
 		tabs[nextIndex].focus();
 		activateTab(tabs[nextIndex].dataset.tab);
+	});
+});
+
+document.querySelectorAll('.track-toggle').forEach((toggle) => {
+	toggle.addEventListener('click', () => {
+		const track = toggle.closest('.tab-track');
+		const wasOpen = track.classList.contains('is-open');
+
+		document.querySelectorAll('.tab-track.is-open').forEach((openTrack) => {
+			openTrack.classList.remove('is-open');
+			openTrack.querySelector('.track-toggle').setAttribute('aria-expanded', 'false');
+		});
+
+		if (!wasOpen) {
+			track.classList.add('is-open');
+			toggle.setAttribute('aria-expanded', 'true');
+		}
+	});
+});
+
+document.addEventListener('click', (event) => {
+	if (event.target.closest('.tab-track')) return;
+	document.querySelectorAll('.tab-track.is-open').forEach((track) => {
+		track.classList.remove('is-open');
+		track.querySelector('.track-toggle').setAttribute('aria-expanded', 'false');
+	});
+});
+
+document.addEventListener('keydown', (event) => {
+	if (event.key !== 'Escape') return;
+	document.querySelectorAll('.tab-track.is-open').forEach((track) => {
+		track.classList.remove('is-open');
+		track.querySelector('.track-toggle').setAttribute('aria-expanded', 'false');
 	});
 });
 
