@@ -101,7 +101,7 @@ border-bottom: 2px solid var(--ink);
 #hero { text-align: center; padding: 1rem 0 3rem; }
 .paper-meta { display: flex; justify-content: space-between; gap: 1rem; border-top: 5px double var(--ink); border-bottom: 1px solid var(--ink); padding: 0.55rem 0; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; }
 .profile-header { display: grid; grid-template-columns: 250px 1fr; align-items: center; gap: 2rem; margin: 2rem auto 0; max-width: 860px; text-align: left; }
-.profile-avatar { width: 250px; height: 250px; object-fit: cover; border: 5px solid var(--surface); outline: 2px solid var(--ink); border-radius: 50%; box-shadow: 8px 8px 0 var(--hot); }
+.profile-avatar { width: 250px; height: 250px; object-fit: cover; object-position: 50% 10%; border: 5px solid var(--surface); outline: 2px solid var(--ink); border-radius: 50%; box-shadow: 8px 8px 0 var(--hot); }
 .kicker { margin-top: 0.75rem; color: var(--accent); font-size: clamp(1rem, 2.2vw, 1.35rem); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 h1 { color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(3.2rem, 10vw, 7rem); line-height: 0.95; letter-spacing: -0.06em; text-transform: uppercase; }
 .tagline {
