@@ -2,68 +2,512 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-<title> Andrew Thomas - Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Andrew Thomas Daily | Cybersecurity &amp; GRC Portfolio</title>
+<meta name="description" content="The Andrew Thomas Daily: the portfolio of Andrew Thomas, a Security+ certified cybersecurity and GRC analyst in Chicago who brings program leadership, business sense, and technical curiosity together.">
+<meta name="author" content="Andrew Thomas">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Andrew Thomas Daily">
+<meta property="og:description" content="From leading people to securing technology: the cybersecurity and GRC portfolio of Andrew Thomas.">
+<meta property="og:url" content="https://athomas-ui.github.io/portfolio/">
+<meta property="og:image" content="https://athomas-ui.github.io/portfolio/media/profile-photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231c1a18'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' text-anchor='middle' fill='%23f7f4ee'%3EAT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
+<!-- Marks the page as JS-enabled before it paints, so only one section shows (no flash). Without JS, every section stays visible. -->
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<header>
-<nav class="tabs" role="tablist" aria-label="Portfolio sections">
-<div class="tab-track">
-<button class="track-label track-toggle" type="button" aria-expanded="false" aria-controls="professional-menu">Professional <span aria-hidden="true">▾</span></button>
-<div class="tab-menu" id="professional-menu">
-<button class="tab is-active" id="overview-tab" role="tab" aria-selected="true" aria-controls="overview" data-tab="overview">Overview</button>
-<button class="tab" id="resume-tab" role="tab" aria-selected="false" aria-controls="resume" data-tab="resume">Resume</button>
-<button class="tab" id="projects-tab" role="tab" aria-selected="false" aria-controls="projects" data-tab="projects">Tech &amp; Impact</button>
-<button class="tab" id="skills-tab" role="tab" aria-selected="false" aria-controls="skills" data-tab="skills">Skills</button>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead wrap">
+<div class="masthead-ears">
+<span class="ear-edition">Digital Edition &middot; Chicago, IL</span>
+<span class="ear-links">
+<a href="https://github.com/athomas-ui" target="_blank" rel="noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+<a href="mailto:athomas@icstars.org">Contact Andrew</a>
+</span>
 </div>
-<div class="tab-track">
-<button class="track-label track-toggle" type="button" aria-expanded="false" aria-controls="journey-menu">Program Journey <span aria-hidden="true">▾</span></button>
-<div class="tab-menu" id="journey-menu">
-<button class="tab" id="leadership-tab" role="tab" aria-selected="false" aria-controls="leadership" data-tab="leadership">Leadership</button>
-<button class="tab" id="business-tab" role="tab" aria-selected="false" aria-controls="business" data-tab="business">Business</button>
-<button class="tab" id="career-planning-tab" role="tab" aria-selected="false" aria-controls="career-planning" data-tab="career-planning">Career Planning</button>
-<button class="tab" id="wellness-tab" role="tab" aria-selected="false" aria-controls="wellness" data-tab="wellness">Wellness</button>
+<h1 class="masthead-title"><a href="#front">The Andrew Thomas Daily</a></h1>
+<p class="masthead-tagline">Leadership, business sense, and technical curiosity, reported from Chicago.</p>
+<div class="masthead-dateline">
+<span>Vol. 01 &middot; No. 01</span>
+<span><time id="edition-date">Digital Edition</time></span>
+<span>Cybersecurity &amp; GRC Edition</span>
 </div>
-<div class="tab-track">
-<button class="track-label track-toggle" type="button" aria-expanded="false" aria-controls="personal-menu">Personal <span aria-hidden="true">▾</span></button>
-<div class="tab-menu" id="personal-menu">
-<button class="tab" id="about-me-tab" role="tab" aria-selected="false" aria-controls="about-me" data-tab="about-me">About Me</button>
-<button class="tab" id="music-showcase-tab" role="tab" aria-selected="false" aria-controls="music-showcase" data-tab="music-showcase">Music Showcase</button>
-</div>
-</nav>
 </header>
-<main>
-<section id="resume" class="tab-panel resume-paper" role="tabpanel" aria-labelledby="resume-tab">
-<div class="section-heading">
-<p class="section-label">Page 02 / Professional Record</p>
-<h2>Resume</h2>
+
+<nav class="desk-nav" aria-label="Sections">
+<ul class="wrap">
+<li><a href="#front" aria-current="page">Front Page</a></li>
+<li><a href="#leadership">Leadership</a></li>
+<li><a href="#business">Business</a></li>
+<li><a href="#technology">Technology</a></li>
+<li><a href="#career-planning">Career Planning</a></li>
+<li><a href="#wellness">Wellness</a></li>
+<li class="nav-divider" aria-hidden="true"></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#about-me">About Me</a></li>
+<li><a href="#music-showcase">Music</a></li>
+</ul>
+</nav>
+
+<main id="main" class="wrap">
+
+<!-- ===================== FRONT PAGE ===================== -->
+<section id="front" class="desk is-active" aria-labelledby="front-title" data-title="Front Page" tabindex="-1">
+<article class="lead-story">
+<div>
+<span class="label">Lead Story &middot; Meet Andrew Thomas</span>
+<h2 id="front-title" class="lead-headline">From Leading People to Securing Technology.</h2>
+<p class="dek">After years of running programs, teaching STEM, and keeping operations on track, Andrew Thomas is bringing that same accountability to cybersecurity and governance, risk, and compliance.</p>
+<p class="byline"><span>By <strong>Andrew Thomas</strong></span><span>Cybersecurity &amp; GRC Analyst</span><span>Chicago, IL</span></p>
+<div class="story-body">
+<p class="drop-cap">I built my career where people, technology, and accountability meet. As a program manager with the YMCA of Metropolitan Chicago, I oversaw technology access and digital learning for 100+ students, reported outcomes to leadership and funding partners, and kept grant-funded programs compliant. As a STEM instructor, I taught cybersecurity, drone coding, robotics, and AI. Earlier roles in AV support and logistics sharpened my troubleshooting and operational discipline.</p>
+<p>Today I am CompTIA Security+ certified, finishing an Associate of Science in Computer Science with a cybersecurity concentration, and interning with i.c.stars Cycle 60, where I am turning training into impact through hands-on coding and confidential client consulting.</p>
 </div>
+<div class="btn-row">
+<a class="btn btn-primary" href="#technology">Explore my projects</a>
+<a class="btn" href="mailto:athomas@icstars.org">Contact me</a>
+<a class="btn" href="https://canva.link/5iaf0i10dwoj9xg" target="_blank" rel="noreferrer">Download resume<span class="visually-hidden"> (opens in a new tab)</span></a>
+</div>
+</div>
+<figure class="lead-figure">
+<img src="media/profile-photo.jpg" alt="Portrait of Andrew Thomas in a charcoal suit and green tie" width="720" height="1080" fetchpriority="high">
+<figcaption><strong>Andrew Thomas</strong>, Security+ certified and an i.c.stars Cycle 60 intern, is targeting entry-level GRC and cybersecurity analyst roles in Chicago.</figcaption>
+<dl class="fact-strip">
+<div><dt>Certified</dt><dd>CompTIA Security<span class="sym">+</span></dd></div>
+<div><dt>Also holds</dt><dd>Fortinet NSE 1</dd></div>
+<div><dt>Studying</dt><dd>AS, Computer Science</dd></div>
+<div><dt>Program</dt><dd>i.c.stars Cycle 60</dd></div>
+</dl>
+</figure>
+</article>
+
+<article class="feature">
+<div>
+<span class="label">Featured &middot; The Technology Desk</span>
+<h2>Cyber//Breach Turns Security Basics Into a Game</h2>
+<p class="dek">A browser game where players step into the role of a junior security officer and earn XP by making the right call on real-world threats like phishing.</p>
+<p>Andrew is building it from scratch in HTML, CSS, and JavaScript, one mission at a time, and documenting each week of progress in the project's public repository.</p>
+<div class="btn-row">
+<a class="btn btn-primary" href="https://athomas-ui.github.io/cyber-breachchi/" target="_blank" rel="noreferrer">Play the prototype<span class="visually-hidden"> (opens in a new tab)</span></a>
+<a class="btn" href="#cyber-breach">Read the case study</a>
+</div>
+</div>
+<figure aria-labelledby="mission-caption">
+<div class="mission-excerpt">
+<p class="mx-title">Mission 01: The Bait</p>
+<dl>
+<dt>FROM</dt><dd>security@micr0soft-support.com</dd>
+<dt>SUBJECT</dt><dd>Urgent: Account Suspension</dd>
+</dl>
+<p>Your account will be permanently suspended if the issue is not resolved within 30 minutes. Verify your account immediately.</p>
+<ul>
+<li>A. Open the link</li>
+<li class="mx-correct">B. Report phishing <span class="visually-hidden">(correct answer)</span></li>
+<li>C. Forward to a coworker</li>
+<li>D. Reply to the sender</li>
+</ul>
+</div>
+<figcaption id="mission-caption">Text from Mission 01 of the Cyber//Breach prototype. The highlighted answer earns XP.</figcaption>
+</figure>
+</article>
+
+<section class="index-section" aria-labelledby="index-title">
+<div class="index-header">
+<h2 id="index-title">Inside Today&rsquo;s Edition</h2>
+<span class="label">Five desks &middot; One story</span>
+</div>
+<ol class="story-index">
+<li><a class="index-card" href="#leadership"><span class="index-num">01</span><h3>The Leadership Desk</h3><p>Leading three choirs, hosting executive conversations, and building an interactive deck on encouragement.</p><span class="text-link">Read Leadership</span></a></li>
+<li><a class="index-card" href="#business"><span class="index-num">02</span><h3>The Business Desk</h3><p>Business analysis on a client proposal for AI-assisted incident and problem management.</p><span class="text-link">Read Business</span></a></li>
+<li><a class="index-card" href="#technology"><span class="index-num">03</span><h3>The Technology Desk</h3><p>Project case studies, the tools behind them, and the security skills they build on.</p><span class="text-link">Read Technology</span></a></li>
+<li><a class="index-card" href="#career-planning"><span class="index-num">04</span><h3>The Career Desk</h3><p>A timeline from operations to cybersecurity, plus the certification roadmap ahead.</p><span class="text-link">Read Career Planning</span></a></li>
+<li><a class="index-card" href="#wellness"><span class="index-num">05</span><h3>The Wellness Desk</h3><p>How rhythm, reflection, and recovery keep the work sustainable.</p><span class="text-link">Read Wellness</span></a></li>
+</ol>
+<p class="also-inside">Also in this edition: the full <a href="#resume">Resume</a>, <a href="#about-me">About Me</a>, and the <a href="#music-showcase">Music Showcase</a> with an interactive drum kit.</p>
+</section>
+
+<aside class="classified" aria-labelledby="classified-title">
+<div>
+<span class="label">Classifieds &middot; Position Wanted</span>
+<h2 id="classified-title">Entry-level GRC or cybersecurity analyst, Chicago.</h2>
+<p>Security+ certified. Years of compliance documentation, program operations, and stakeholder reporting. Ready to translate technical risk into clear action for the teams and organizations it protects.</p>
+</div>
+<div class="btn-row">
+<a class="btn btn-primary" href="mailto:athomas@icstars.org">Email Andrew</a>
+<a class="btn" href="https://www.linkedin.com/in/andrew-thomas-83564259" target="_blank" rel="noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>
+<a class="btn" href="https://github.com/athomas-ui" target="_blank" rel="noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+</div>
+</aside>
+</section>
+
+<!-- ===================== LEADERSHIP ===================== -->
+<section id="leadership" class="desk" aria-labelledby="leadership-title" data-title="The Leadership Desk" tabindex="-1">
+<header class="desk-header">
+<span class="label">Section B &middot; C60 Portfolio</span>
+<h2 id="leadership-title">The Leadership Desk</h2>
+<p class="dek">How I lead teams, prepare people, and turn many perspectives into one accountable direction.</p>
+<span class="desk-page">Page B1</span>
+</header>
+<div class="columns">
+<article class="column column-lead">
+<h3>Lead With Clarity</h3>
+<p>I connect people, priorities, and technical work. In team environments, I help turn many perspectives into one accountable direction.</p>
+</article>
+<article class="column">
+<h3>Build Trust</h3>
+<p>My leadership style is grounded in communication, delegation, follow-through, and making space for every contributor to do strong work.</p>
+</article>
+<article class="column">
+<h3>Deliver Together</h3>
+<p>From program management to client consulting, I keep teams focused on the outcome, the audience, and the next decision.</p>
+</article>
+</div>
+<article class="story story-split">
+<div>
+<span class="label">Minister of Music</span>
+<h3>Leading the Musical Staff</h3>
+</div>
+<div>
+<p>At Greater New St James, I lead three choirs directly: Men&#39;s, Young Adult, and Combined. Each week I select the music, prepare lyrics and reference recordings, and send a message that sets the tone before Sunday.</p>
+<p class="pull-quote">This is leadership through preparation: creating alignment, readiness, and purpose before anyone sees me step forward.</p>
+</div>
+</article>
+<article class="story story-split">
+<div>
+<span class="label">Tea Host</span>
+<h3>Mission-Led Leadership</h3>
+</div>
+<div>
+<p>I hosted Yemi Akisanya, Axon&#39;s People &amp; Culture leader, for a high tea conversation about global employee experience, JEDI, learning, philanthropy, and the systems that help people thrive. What stayed with me was Axon&#39;s mission to reduce gun-related deaths by giving communities a non-lethal option.</p>
+<p>It reinforced a principle I bring to security and GRC: protect the people a system touches, then build the culture and evidence to prove it.</p>
+</div>
+</article>
+<article class="story">
+<span class="label">Tea Debriefs</span>
+<h3>Six Lines I Carry Forward</h3>
+<div class="quote-grid">
+<blockquote>&ldquo;Perseverance, grit, resilience, and determination.&rdquo;<cite>JV</cite></blockquote>
+<blockquote>&ldquo;Am I going to be Pat, or am I going to be JV?&rdquo;<cite>JV</cite></blockquote>
+<blockquote>&ldquo;Make the world better today.&rdquo;<cite>Marc D.</cite></blockquote>
+<blockquote>&ldquo;Learn, master, teach.&rdquo;<cite>Kevin Gates</cite></blockquote>
+<blockquote>&ldquo;Presence, passion, skills.&rdquo;<cite>Kevin Gates</cite></blockquote>
+<blockquote>&ldquo;An L is nothing but a lesson.&rdquo;<cite>Kevin Gates</cite></blockquote>
+</div>
+<p class="debrief-thread">Six quotes, four people, one thread: decide who you are before the room decides for you.</p>
+</article>
+<article class="story story-split">
+<div>
+<span class="label">Planetary Responsibility &middot; Project</span>
+<h3>Encourage</h3>
+</div>
+<div>
+<p><strong>Five gifts. Twenty-five actions. One choice.</strong> For i.c.stars Cycle 60 Planetary Responsibility, I built an interactive presentation arguing that encouragement is not soft: it is leadership with a purpose. It walks the audience through five gifts (Empathy, Confidence, Trust, Knowledge, and Communication), then asks each person to choose one action to take that day.</p>
+<div class="btn-row">
+<a class="btn btn-primary" href="https://athomas-ui.github.io/Planetary-Responsiblity/" target="_blank" rel="noreferrer">View the Encourage deck<span class="visually-hidden"> (opens in a new tab)</span></a>
+<a class="btn" href="#encourage">How it was built</a>
+</div>
+</div>
+</article>
+</section>
+
+<!-- ===================== BUSINESS ===================== -->
+<section id="business" class="desk" aria-labelledby="business-title" data-title="The Business Desk" tabindex="-1">
+<header class="desk-header">
+<span class="label">Section C &middot; C60 Portfolio</span>
+<h2 id="business-title">The Business Desk</h2>
+<p class="dek">Understand the business problem, document the risk, and recommend a path people can actually use.</p>
+<span class="desk-page">Page C1</span>
+</header>
+<div class="columns">
+<article class="column column-lead">
+<h3>Translate Risk Into Action</h3>
+<p>I bring an operations mindset to technology: understand the business problem, document the risk, and recommend a path people can actually use.</p>
+</article>
+<article class="column">
+<h3>Client-Ready Thinking</h3>
+<p>My experience spans stakeholder engagement, grant compliance, budgeting, resource allocation, and presenting technical direction to non-technical audiences.</p>
+</article>
+<article class="column">
+<h3>Value With Accountability</h3>
+<p>I measure strong work by whether it is clear, defensible, practical, and aligned to the organization it serves.</p>
+</article>
+</div>
+<article class="project-feature" id="client-proposal">
+<div class="project-top">
+<span class="label">Case Study &middot; i.c.stars Cycle 60</span>
+<span class="status status-progress">Client engagement</span>
+</div>
+<h3>Confidential Client Solution Proposal</h3>
+<p class="dek">Can AI help a healthcare-sector organization see incidents and problems coming before they disrupt operations?</p>
+<div class="project-grid">
+<dl class="qa">
+<div><dt>The business problem</dt><dd>The client wanted to improve incident tracking and problem navigation by using AI systems to identify patterns and predict upcoming incidents and problems before they disrupted operations.</dd></div>
+<div><dt>My role</dt><dd>Business Analyst on a five-person consulting team (All Stars Associates). My job was to make sure the proposed solution actually solved that business problem, keeping every technical recommendation tied to the client&#39;s operational goals.</dd></div>
+<div><dt>What I contributed</dt><dd><ul>
+<li>Framed the confidential healthcare-sector RFP around the client&#39;s incident and problem-management needs before solution design began.</li>
+<li>Checked each proposed AI pattern-detection and prediction capability against the business problem so the solution stayed practical and measurable.</li>
+<li>Helped translate technical options into a clear narrative for the client, then co-presented the solution proposal and delivery roadmap.</li>
+</ul></dd></div>
+</dl>
+<aside class="project-aside" aria-label="Project details">
+<h4>Methods</h4>
+<ul class="tag-list">
+<li>Business Analysis</li>
+<li>Requirements Alignment</li>
+<li>Incident &amp; Problem Management</li>
+<li>Data &amp; AI Strategy</li>
+<li>Client Consulting</li>
+<li>Agile/Scrum</li>
+</ul>
+<h4>Evidence</h4>
+<p class="meta">Deliverables are confidential to the client, so this case study describes the problem and my role without sharing proposal materials.</p>
+</aside>
+</div>
+</article>
+</section>
+
+<!-- ===================== TECHNOLOGY ===================== -->
+<section id="technology" class="desk" aria-labelledby="technology-title" data-title="The Technology Desk" tabindex="-1">
+<header class="desk-header">
+<span class="label">Section D &middot; C60 Portfolio &middot; Tech &amp; Impact</span>
+<h2 id="technology-title">The Technology Desk</h2>
+<p class="dek">What I am building, how I am building it, and the security foundation underneath. Every project here is real and linked to its source.</p>
+<span class="desk-page">Page D1</span>
+</header>
+
+<article class="project-feature" id="cyber-breach">
+<div class="project-top">
+<span class="label">Project Spotlight</span>
+<span class="status status-progress">In progress &middot; playable prototype</span>
+</div>
+<h3>Cyber//Breach</h3>
+<p class="dek">A basic cybersecurity training game that helps people understand the fundamentals of internet security by making decisions, not just reading about them.</p>
+<div class="project-grid">
+<dl class="qa">
+<div><dt>Objective</dt><dd>Teach security basics such as spotting a phishing email through short missions where the right call earns XP and a higher rank.</dd></div>
+<div><dt>My role</dt><dd>Creator and developer: game design, front-end code, testing, and documentation.</dd></div>
+<div><dt>What works today</dt><dd><ul>
+<li>Character selection, then a player card that tracks rank, XP, and missions completed out of five.</li>
+<li>Mission 01, &ldquo;The Bait,&rdquo; a phishing scenario with four possible responses.</li>
+<li>An answer-checking engine that compares the player&#39;s choice to an answer key, shows feedback on the page, and adds 50 XP per correct answer.</li>
+<li>Answer locking after the first click, so XP cannot be farmed by re-clicking.</li>
+</ul></dd></div>
+<div><dt>What I learned</dt><dd>Verifying logic with hand-checked math instead of assumptions, and using clear variable names so nested loops stay readable.</dd></div>
+</dl>
+<aside class="project-aside" aria-label="Project details">
+<h4>Built with</h4>
+<ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git &amp; GitHub</li><li>GitHub Pages</li></ul>
+<h4>Evidence</h4>
+<a class="btn btn-primary" href="https://athomas-ui.github.io/cyber-breachchi/" target="_blank" rel="noreferrer">Play the prototype<span class="visually-hidden"> (opens in a new tab)</span></a>
+<a class="btn" href="https://github.com/athomas-ui/cyber-breachchi" target="_blank" rel="noreferrer">View the code<span class="visually-hidden"> (opens in a new tab)</span></a>
+</aside>
+</div>
+<details class="expand">
+<summary>Open the build log</summary>
+<div class="expand-body">
+<h4>Week 1</h4>
+<ol>
+<li>Built a real answer-checking engine that compares the chosen answer against an answer key instead of just logging picks.</li>
+<li>Wired live feedback onto the mission screen, with separate messages for correct and incorrect answers.</li>
+<li>Connected XP to the decision engine: read the number from the page, converted it to real math, and added 50 points per correct answer.</li>
+<li>Proved the engine with hand-checked math, confirming the final XP matched exactly what four correct clicks should produce.</li>
+</ol>
+<h4>Week 2</h4>
+<ol>
+<li>Locked each question after one answer so XP can&#39;t be farmed by re-clicking.</li>
+<li>Proved the lock works on both outcomes: buttons freeze visually and functionally either way.</li>
+<li>Learned and applied variable shadowing, keeping loop names separate so nested code stays readable.</li>
+</ol>
+<h4>Next</h4>
+<p>The player card is already built to track five missions; the next step is building the missions after Mission 01.</p>
+</div>
+</details>
+</article>
+
+<article class="project-feature" id="encourage">
+<div class="project-top">
+<span class="label">Project Spotlight &middot; Planetary Responsibility</span>
+<span class="status status-live">Live</span>
+</div>
+<h3>Encourage: An Interactive Deck</h3>
+<p class="dek">A presentation built as a web app, so the audience can take part instead of just watching.</p>
+<div class="project-grid">
+<dl class="qa">
+<div><dt>Objective</dt><dd>For i.c.stars Cycle 60 Planetary Responsibility, make the case that encouragement is a leadership practice and give each viewer one concrete action to take.</dd></div>
+<div><dt>My role</dt><dd>Creator: content, design, and the single-page HTML, CSS, and JavaScript build.</dd></div>
+<div><dt>What it does</dt><dd><ul>
+<li>Eight narrated slides on five gifts: Empathy, Confidence, Trust, Knowledge, and Communication.</li>
+<li>An interactive challenge where the viewer picks a gift, then one action to start today.</li>
+<li>A supplementary practice quiz, a jump-to-slide menu, and presenter notes.</li>
+</ul></dd></div>
+</dl>
+<aside class="project-aside" aria-label="Project details">
+<h4>Built with</h4>
+<ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+<h4>Evidence</h4>
+<a class="btn btn-primary" href="https://athomas-ui.github.io/Planetary-Responsiblity/" target="_blank" rel="noreferrer">View the deck<span class="visually-hidden"> (opens in a new tab)</span></a>
+<a class="btn" href="https://github.com/athomas-ui/Planetary-Responsiblity" target="_blank" rel="noreferrer">View the code<span class="visually-hidden"> (opens in a new tab)</span></a>
+</aside>
+</div>
+</article>
+
+<h3 class="subsection-title">Skills &amp; Tools</h3>
+<div class="skills-grid">
+<section>
+<h4>Security &amp; Risk</h4>
+<ul class="bullet-list"><li>Network Security &amp; Firewalls</li><li>Risk &amp; Compliance Documentation</li><li>Data Monitoring &amp; Reporting</li><li>Security Awareness Training</li></ul>
+</section>
+<section>
+<h4>Operations</h4>
+<ul class="bullet-list"><li>Troubleshooting &amp; Help Desk Support</li><li>Program &amp; Project Coordination</li><li>Budgeting &amp; Resource Allocation</li><li>Stakeholder Engagement</li></ul>
+</section>
+<section>
+<h4>Tools</h4>
+<p class="tool-list">FortiGate, Wireshark, Packet Tracer, Microsoft 365, Salesforce, Slack, Google Workspace, Excel, PowerPoint, Word, Canva, Zoom</p>
+<h4 style="margin-top: var(--space-5)">Front-end</h4>
+<p class="tool-list">HTML, CSS, JavaScript, Git, GitHub Pages</p>
+</section>
+</div>
+
+<aside class="colophon" aria-labelledby="colophon-title">
+<span class="label">Colophon</span>
+<h3 id="colophon-title">How This Paper Is Built</h3>
+<p>The Andrew Thomas Daily is hand-written HTML, CSS, and vanilla JavaScript with no framework and no build step, published on GitHub Pages. Each section has its own address, so a link like <code>#technology</code> opens straight to this desk.</p>
+<p style="margin-top: var(--space-3)"><a class="text-link" href="https://github.com/athomas-ui/portfolio" target="_blank" rel="noreferrer">View this site&rsquo;s source<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+</aside>
+</section>
+
+<!-- ===================== CAREER PLANNING ===================== -->
+<section id="career-planning" class="desk" aria-labelledby="career-title" data-title="The Career Desk" tabindex="-1">
+<header class="desk-header">
+<span class="label">Section E &middot; C60 Portfolio</span>
+<h2 id="career-title">The Career Desk</h2>
+<p class="dek">Where I have been, where I am now, and the credentials that come next.</p>
+<span class="desk-page">Page E1</span>
+</header>
+<div class="columns">
+<article class="column column-lead">
+<h3>Next Target</h3>
+<p>I am pursuing entry-level GRC and cybersecurity analyst roles in Chicago where I can apply security fundamentals, documentation discipline, and operational judgment.</p>
+</article>
+<article class="column">
+<h3>Build the Foundation</h3>
+<p>I am completing my Associate of Science in Computer Science with a concentration in cybersecurity and continuing to grow through hands-on client work.</p>
+</article>
+<article class="column">
+<h3>Keep Advancing</h3>
+<p>My development path includes deeper analyst experience, CySA+ preparation, and eventually the ISC2 CGRC credential.</p>
+</article>
+</div>
+
+<article class="story">
+<span class="label">The Journey</span>
+<h3>A Career Timeline</h3>
+<ol class="timeline">
+<li><span class="when">2015 &ndash; 2018</span><div><h3>Operations Foundations <span>Guitar Center &middot; FedEx</span></h3><p>Troubleshooting audio, visual, and lighting gear, and logging shipments with scanning systems, built the habits of accurate records and careful checks.</p></div></li>
+<li><span class="when">2018 &ndash; 2026</span><div><h3>Program Manager <span>YMCA of Metropolitan Chicago</span></h3><p>Managed budgets, staff, and grant reporting while overseeing technology access and digital learning for 100+ students. Recognized as a Verizon Innovation Education Cohort recipient and Community Schools Initiative Coordinator of the Year.</p></div></li>
+<li><span class="when">2021 &ndash; 2023</span><div><h3>STEM Instructor &amp; Project Coordinator <span>NextWave STEM &middot; Prevention Partnership</span></h3><p>Taught cybersecurity, robotics, drone coding, and AI; designed internet-safety workshops; and drafted compliance documentation for grant-funded programs.</p></div></li>
+<li><span class="when">2022</span><div><h3>Fortinet NSE 1 <span>Network Security Associate</span></h3><p>A first formal credential in network security.</p></div></li>
+<li><span class="when">Sept 2025</span><div><h3>CompTIA Security<span class="sym">+</span> <span>Certified</span></h3><p>Validated the security fundamentals behind a move into cybersecurity and GRC.</p></div></li>
+<li class="is-now"><span class="when">Aug 2026 &ndash; now</span><div><h3>Intern <span>i.c.stars Cycle 60</span></h3><p>Intensive technology training combined with a live, confidential client consulting engagement.</p></div></li>
+<li class="is-next"><span class="when">Next</span><div><h3>Analyst Role &amp; Credentials <span>Planned</span></h3><p>Finish the AS in Computer Science, then pursue CySA+ and ISC2 CGRC while starting in an entry-level GRC or cybersecurity analyst role.</p></div></li>
+</ol>
+</article>
+
+<article class="story">
+<span class="label">The Roadmap</span>
+<h3>Certifications &amp; Education</h3>
+<div class="cert-board">
+<section>
+<h4><span class="status status-live">Earned</span></h4>
+<ul>
+<li><strong>CompTIA Security+</strong><span>Sept 2025</span></li>
+<li><strong>Fortinet NSE 1</strong><span>Network Security Associate, 2022</span></li>
+<li><strong>IBM SkillsBuild: Data Fundamentals</strong><span>2023</span></li>
+</ul>
+</section>
+<section>
+<h4><span class="status status-progress">In progress</span></h4>
+<ul>
+<li><strong>AS, Computer Science</strong><span>Cybersecurity concentration, City Colleges of Chicago, expected 2026</span></li>
+<li><strong>ISC2 Certified in Cybersecurity</strong><span>Pursuing</span></li>
+<li><strong>Meta Front-End Development</strong><span>In progress</span></li>
+</ul>
+</section>
+<section>
+<h4><span class="status status-planned">Planned</span></h4>
+<ul>
+<li><strong>CompTIA CySA+</strong><span>Next analyst-level credential</span></li>
+<li><strong>ISC2 CGRC</strong><span>Governance, risk, and compliance</span></li>
+</ul>
+</section>
+</div>
+</article>
+</section>
+
+<!-- ===================== WELLNESS ===================== -->
+<section id="wellness" class="desk" aria-labelledby="wellness-title" data-title="The Wellness Desk" tabindex="-1">
+<header class="desk-header">
+<span class="label">Section F &middot; C60 Portfolio</span>
+<h2 id="wellness-title">The Wellness Desk</h2>
+<p class="dek">Sustainable performance is part of the job, not a break from it.</p>
+<span class="desk-page">Page F1</span>
+</header>
+<div class="columns">
+<article class="column column-lead">
+<h3>Stay Grounded</h3>
+<p>Sustainable performance starts with making room for reflection, relationships, creativity, and recovery alongside the work.</p>
+</article>
+<article class="column">
+<h3>Find the Rhythm</h3>
+<p>Music, ministry, and time away from the screen help me return to technical challenges with focus and perspective.</p>
+</article>
+<article class="column">
+<h3>Grow With Intention</h3>
+<p>I want a career that is ambitious and durable: one that protects my energy while giving my skills room to compound.</p>
+</article>
+</div>
+<p class="pull-quote">&ldquo;Every good day needs a soundtrack.&rdquo;</p>
+<p class="also-inside">See how music keeps the rhythm in the <a href="#music-showcase">Music Showcase</a>.</p>
+</section>
+
+<!-- ===================== RESUME ===================== -->
+<section id="resume" class="desk" aria-labelledby="resume-title" data-title="Resume" tabindex="-1">
+<header class="desk-header">
+<span class="label">Section G &middot; Professional Record</span>
+<h2 id="resume-title">Resume</h2>
+<span class="desk-page">Page G1</span>
+</header>
 <div class="resume-header">
 <div>
 <p class="resume-kicker">Andrew Thomas</p>
 <p class="resume-role">Cybersecurity &amp; GRC Analyst (Entry-Level)</p>
 <div class="resume-contact"><a href="tel:17084468890">708.446.8890</a><a href="mailto:andrewdrewthomas@gmail.com">andrewdrewthomas@gmail.com</a><span>Chicago, IL</span></div>
+<div class="btn-row"><a class="btn btn-primary" href="https://canva.link/5iaf0i10dwoj9xg" target="_blank" rel="noreferrer">Download resume<span class="visually-hidden"> (opens in a new tab)</span></a></div>
 </div>
 <p class="resume-summary">IT professional with 5+ years of experience spanning network security, technical education, and program compliance. CompTIA Security+ certified, with Fortinet NSE 1 certification; completing an Associate of Science in Computer Science with a concentration in cybersecurity (2026) and currently interning with i.c.stars (Cycle 60), consulting on a client technology project. Experienced in documenting compliance with government and institutional standards, monitoring systems and program data, and translating technical risk for non-technical stakeholders. Seeking an entry-level GRC or cybersecurity analyst role.</p>
 </div>
 <div class="resume-details">
 <article class="resume-block">
-<p class="story-label">Certifications</p>
+<span class="label">Certifications</span>
 <ul class="bullet-list"><li><strong>CompTIA Security+</strong><span>Sept 2025</span></li><li><strong>Fortinet NSE 1</strong> - Network Security Associate <span>2022</span></li><li><strong>IBM SkillsBuild</strong>: Data Fundamentals <span>2023</span></li><li><strong>Meta Front-End Development</strong> <span>In Progress, 2023</span></li></ul>
 </article>
 <article class="resume-block">
-<p class="story-label">Skills</p>
+<span class="label">Skills</span>
 <h3>Security &amp; Risk</h3>
 <ul class="bullet-list"><li>Network Security &amp; Firewalls</li><li>Risk &amp; Compliance Documentation</li><li>Data Monitoring &amp; Reporting</li><li>Security Awareness Training</li></ul>
 <h3>Operations</h3>
 <ul class="bullet-list"><li>Troubleshooting &amp; Help Desk Support</li><li>Program &amp; Project Coordination</li><li>Budgeting &amp; Resource Allocation</li><li>Stakeholder Engagement</li></ul>
 </article>
-<article class="resume-block"><p class="story-label">Tools</p><p class="tool-list">FortiGate, Wireshark, Packet Tracer, Microsoft 365, Salesforce, Slack, Google Workspace, Excel, PowerPoint, Word, Canva, Zoom</p></article>
+<article class="resume-block"><span class="label">Tools</span><p class="tool-list">FortiGate, Wireshark, Packet Tracer, Microsoft 365, Salesforce, Slack, Google Workspace, Excel, PowerPoint, Word, Canva, Zoom</p></article>
 </div>
 <div class="resume-experience">
-<div class="resume-subheading"><p class="story-label">Experience</p><h3>Professional History</h3></div>
+<div class="resume-subheading"><span class="label">Experience</span><h3>Professional History</h3></div>
 <article class="experience-entry"><div class="experience-heading"><h4>Intern <span>i.c.stars</span></h4><p>Chicago, IL | Aug 2026 - Dec 2026 (Cycle 60)</p></div><ul class="bullet-list"><li>Completing an intensive technology internship combining hands-on coding and technical training with real-world client consulting.</li><li>Consulting on a confidential client engagement as part of a cohort-based technical team, applying new coding and technical skills to a live business project.</li></ul></article>
 <article class="experience-entry"><div class="experience-heading"><h4>Program Manager <span>YMCA of Metropolitan Chicago</span></h4><p>Chicago, IL | Nov 2018 - Aug 2026</p></div><ul class="bullet-list"><li>Monitor program data, track attendance, and report outcomes to executive leadership and funding partners, ensuring accuracy and compliance with grant requirements.</li><li>Oversee technology access and digital learning systems for 100+ students, coordinating secure remote and on-site program logistics.</li><li>Manage program budget and expenses; hire, train, evaluate, and supervise staff, scheduling to ensure proper coverage.</li><li>Partner with school administration and community organizations to deliver grant-funded initiatives, workshops, and special events.</li><li>Recognized: Verizon Innovation Education Cohort Recipient; Community Schools Initiative Coordinator of the Year.</li></ul></article>
 <article class="experience-entry"><div class="experience-heading"><h4>Admin Project Coordinator <span>Prevention Partnership</span></h4><p>Chicago, IL | Mar 2021 - Aug 2023</p></div><ul class="bullet-list"><li>Drafted program documentation and reporting for grant-funded initiatives, ensuring compliance with government and institutional standards.</li><li>Coordinated daily operations of prevention and public health programs serving Chicago families.</li><li>Facilitated community workshops focused on youth development and digital safety.</li><li>Supported HR functions including new-hire orientation, document filing, and inventory procurement.</li></ul></article>
@@ -71,209 +515,20 @@ content="width=device-width, initial-scale=1.0">
 <article class="experience-entry"><div class="experience-heading"><h4>Rental &amp; Tech Specialist <span>Guitar Center</span></h4><p>Chicago, IL | Nov 2015 - 2018</p></div><ul class="bullet-list"><li>Provided technical support and hands-on setup for audio, visual, and lighting equipment; troubleshot and performed minor repairs on rental gear.</li><li>Maintained accurate inventory records and quality-checked returned equipment for functionality and readiness.</li><li>Advised customers on equipment solutions, ensuring compatibility and safety protocols.</li></ul></article>
 <article class="experience-entry"><div class="experience-heading"><h4>Packing &amp; Shipping Associate <span>FedEx</span></h4><p>Chicago, IL | Nov 2015 - Dec 2017</p></div><ul class="bullet-list"><li>Operated handheld scanning and package-tracking systems to log inventory and verify shipments with high data accuracy.</li><li>Rotated through Loader, Unloader, Quality Assurance, Scan Weigh and Key (SWAK), and Palletizer roles supporting end-to-end logistics operations.</li></ul></article>
 </div>
-<div class="education-entry"><div><p class="story-label">Education</p><h3>Associate of Science - Computer Science</h3></div><p>Concentration in Cybersecurity<br><strong>City Colleges of Chicago</strong><br>In Progress, expected 2026</p></div>
+<div class="education-entry"><div><span class="label">Education</span><h3>Associate of Science - Computer Science</h3></div><p>Concentration in Cybersecurity<br><strong>City Colleges of Chicago</strong><br>In Progress, expected 2026</p></div>
 </section>
-<section id="skills" class="tab-panel" role="tabpanel" aria-labelledby="skills-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Page 03 / Core Capabilities</p>
-<h2>Skills</h2>
-</div>
-<div class="about-columns">
-<article class="about-column about-lead">
-<h3>Security &amp; Risk</h3>
-<ul class="bullet-list"><li>Network Security &amp; Firewalls</li><li>Risk &amp; Compliance Documentation</li><li>Data Monitoring &amp; Reporting</li><li>Security Awareness Training</li></ul>
-</article>
-<article class="about-column">
-<h3>Operations</h3>
-<ul class="bullet-list"><li>Troubleshooting &amp; Help Desk Support</li><li>Program &amp; Project Coordination</li><li>Budgeting &amp; Resource Allocation</li><li>Stakeholder Engagement</li></ul>
-</article>
-<article class="about-column">
-<h3>Tools</h3>
-<p class="tool-list">FortiGate, Wireshark, Packet Tracer, Microsoft 365, Salesforce, Slack, Google Workspace, Excel, PowerPoint, Word, Canva, Zoom</p>
-</article>
-</div>
-</section>
-<section id="leadership" class="tab-panel journey-paper" role="tabpanel" aria-labelledby="leadership-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Program Journey / Leadership</p>
-<h2>Leadership</h2>
-</div>
-<div class="about-columns">
-<article class="about-column about-lead">
-<h3>Lead With Clarity</h3>
-<p>I connect people, priorities, and technical work. In team environments, I help turn many perspectives into one accountable direction.</p>
-</article>
-<article class="about-column">
-<h3>Build Trust</h3>
-<p>My leadership style is grounded in communication, delegation, follow-through, and making space for every contributor to do strong work.</p>
-</article>
-<article class="about-column">
-<h3>Deliver Together</h3>
-<p>From program management to client consulting, I keep teams focused on the outcome, the audience, and the next decision.</p>
-</article>
-</div>
-<article class="leadership-feature">
-<p class="story-label">Tea Host</p>
-<h3>Mission-Led Leadership</h3>
-<p>I hosted Yemi Akisanya, Axon&#39;s People &amp; Culture leader, for a high tea conversation about global employee experience, JEDI, learning, philanthropy, and the systems that help people thrive. What stayed with me was Axon&#39;s mission to reduce gun-related deaths by giving communities a non-lethal option. It reinforced a principle I bring to security and GRC: protect the people a system touches, then build the culture and evidence to prove it.</p>
-</article>
-<article class="leadership-feature">
-<p class="story-label">Tea Debriefs</p>
-<h3>Six Lines I Carry Forward</h3>
-<div class="quote-grid">
-<blockquote>&quot;Perseverance, grit, resilience, and determination.&quot;<cite>JV</cite></blockquote>
-<blockquote>&quot;Am I going to be Pat, or am I going to be JV?&quot;<cite>JV</cite></blockquote>
-<blockquote>&quot;Make the world better today.&quot;<cite>Marc D.</cite></blockquote>
-<blockquote>&quot;Learn, master, teach.&quot;<cite>Kevin Gates</cite></blockquote>
-<blockquote>&quot;Presence, passion, skills.&quot;<cite>Kevin Gates</cite></blockquote>
-<blockquote>&quot;An L is nothing but a lesson.&quot;<cite>Kevin Gates</cite></blockquote>
-</div>
-<p class="debrief-thread">Six quotes, four people, one thread: decide who you are before the room decides for you.</p>
-</article>
-<article class="leadership-feature">
-<h3>Minister of Music &mdash; Leading the Musical Staff</h3>
-<p>At Greater New St James, I lead three choirs directly: Men&#39;s, Young Adult, and Combined. Each week I select the music, prepare lyrics and reference recordings, and send a message that sets the tone before Sunday. This is leadership through preparation: creating alignment, readiness, and purpose before anyone sees me step forward.</p>
-</article>
-<article class="leadership-feature">
-<p class="story-label">Project</p>
-<h3>Encourage</h3>
-<p><a class="visit-button" href="https://athomas-ui.github.io/Planetary-Responsiblity/" target="_blank" rel="noreferrer">View Encourage Project <span aria-hidden="true">↗</span></a></p>
-</article>
-</section>
-<section id="business" class="tab-panel journey-paper" role="tabpanel" aria-labelledby="business-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Program Journey / Business Acumen</p>
-<h2>Business</h2>
-</div>
-<div class="about-columns">
-<article class="about-column about-lead">
-<h3>Translate Risk Into Action</h3>
-<p>I bring an operations mindset to technology: understand the business problem, document the risk, and recommend a path people can actually use.</p>
-</article>
-<article class="about-column">
-<h3>Client-Ready Thinking</h3>
-<p>My experience spans stakeholder engagement, grant compliance, budgeting, resource allocation, and presenting technical direction to non-technical audiences.</p>
-</article>
-<article class="about-column">
-<h3>Value With Accountability</h3>
-<p>I measure strong work by whether it is clear, defensible, practical, and aligned to the organization it serves.</p>
-</article>
-</div>
-<article class="project project-card">
-<h3 class="project-title">Confidential Client Solution Proposal</h3>
-<p class="project-role"><strong>Role:</strong> Business Analyst &mdash; All Stars Associates (i.c.stars Cycle 60)</p>
-<p class="project-summary"><strong>Business problem:</strong> The client wanted to improve incident tracking and problem navigation by using AI systems to identify patterns and predict upcoming incidents and problems before they disrupted operations.</p>
-<p class="project-summary"><strong>My role:</strong> As the business analyst on a five-person consulting team, I made sure the proposed solution actually solved that business problem, keeping every technical recommendation tied to the client&#39;s operational goals.</p>
-<ul class="project-highlights">
-<li>Framed the confidential healthcare-sector RFP around the client&#39;s incident and problem-management needs before solution design began.</li>
-<li>Checked each proposed AI pattern-detection and prediction capability against the business problem so the solution stayed practical and measurable.</li>
-<li>Helped translate technical options into a clear narrative for the client, then co-presented the solution proposal and delivery roadmap.</li>
-</ul>
-<div class="project-tech-stack">
-<span class="tech-tag">Business Analysis</span>
-<span class="tech-tag">Requirements Alignment</span>
-<span class="tech-tag">Incident &amp; Problem Management</span>
-<span class="tech-tag">Data &amp; AI Strategy</span>
-<span class="tech-tag">Client Consulting</span>
-<span class="tech-tag">Agile/Scrum</span>
-</div>
-<p class="project-meta"><strong>Engagement:</strong> Confidential healthcare-sector client <span aria-hidden="true">|</span> <strong>Program:</strong> i.c.stars Cycle 60</p>
-</article>
-</section>
-<section id="career-planning" class="tab-panel journey-paper" role="tabpanel" aria-labelledby="career-planning-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Program Journey / Career Direction</p>
-<h2>Career Planning</h2>
-</div>
-<div class="about-columns">
-<article class="about-column about-lead">
-<h3>Next Target</h3>
-<p>I am pursuing entry-level GRC and cybersecurity analyst roles where I can apply security fundamentals, documentation discipline, and operational judgment.</p>
-</article>
-<article class="about-column">
-<h3>Build the Foundation</h3>
-<p>I am completing my Associate of Science in Computer Science with a concentration in cybersecurity and continuing to grow through hands-on client work.</p>
-</article>
-<article class="about-column">
-<h3>Keep Advancing</h3>
-<p>My development path includes deeper analyst experience, CySA+ preparation, and eventually the ISC2 CGRC credential.</p>
-</article>
-</div>
-</section>
-<section id="wellness" class="tab-panel journey-paper" role="tabpanel" aria-labelledby="wellness-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Program Journey / Sustainable Growth</p>
-<h2>Wellness</h2>
-</div>
-<div class="about-columns">
-<article class="about-column about-lead">
-<h3>Stay Grounded</h3>
-<p>Sustainable performance starts with making room for reflection, relationships, creativity, and recovery alongside the work.</p>
-</article>
-<article class="about-column">
-<h3>Find the Rhythm</h3>
-<p>Music, ministry, and time away from the screen help me return to technical challenges with focus and perspective.</p>
-</article>
-<article class="about-column">
-<h3>Grow With Intention</h3>
-<p>I want a career that was about to be but I love chicken too much  ambitious and durable: one that protects my energy while giving my skills room to compound.</p>
-</article>
-</div>
-</section>
-<section id="overview" class="tab-panel" role="tabpanel" aria-labelledby="overview-tab">
-<div id="hero">
-<div class="paper-meta">
-<span>THE ANDREW THOMAS DAILY</span>
-<span>VOL. 01 / NO. 01</span>
-<span>CYBERSECURITY EDITION</span>
-</div>
-<div class="profile-header">
-<img class="profile-avatar" src="media/profile-photo.png" alt="Andrew Thomas" width="250" height="250" loading="lazy">
-<div class="profile-copy">
-<h1>Andrew Thomas</h1>
-<p class="kicker">Cybersecurity &amp; GRC Analyst</p>
-<p class="tagline">Security+ Certified <span aria-hidden="true">|</span> i.c.stars Cycle 60 <span aria-hidden="true">|</span> Computer Science &mdash; Cybersecurity</p>
-</div>
-</div>
-<div class="headline-facts" aria-label="Career highlights">
-<span>SECURITY MINDED</span>
-<span> SECURITY+ CERTIFIED</span>
-<span>OPEN TO COLLABORATION</span>
-</div>
-<div class="profile-links" aria-label="Professional profiles">
-<a class="visit-button" href="https://github.com/athomas-ui" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-<a class="visit-button" href="https://www.linkedin.com/in/andrew-thomas-83564259" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-<a class="visit-button" href="https://canva.link/5iaf0i10dwoj9xg" target="_blank" rel="noreferrer">Download Resume <span aria-hidden="true">↓</span></a>
-</div>
-</div>
-<div class="section-heading">
-<p class="section-label">Page 02 / The Profile</p>
-<h2>Overview</h2>
-</div>
-<div class="about-columns">
-<article class="about-column about-lead">
-<h3>The Main Story</h3>
-<p>I built my career where people, technology, and accountability meet. In Chicago, I led digital learning for 100+ students, drove grant compliance, and taught cybersecurity, robotics, and AI. Earlier roles in AV and logistics sharpened my troubleshooting and operational discipline. Now I protect data, strengthen systems, and make risk clear.</p>
-</article>
-<article class="about-column">
-<h3>On The Beat</h3>
-<p>In i.c.stars Cycle 60, I am turning training into impact through hands-on coding and confidential client consulting. I am finishing my AS in Computer Science and pursuing ISC2 Certified in Cybersecurity, building momentum at the intersection of security, technology, and business.</p>
-</article>
-<article class="about-column">
-<h3>What Comes Next</h3>
-<p>Next, I am targeting GRC and cybersecurity analyst roles in Chicago. I will finish my AS, earn CySA+, and pursue ISC2 CGRC. My edge: translating technical risk into clear action for engineers, executives, and the organizations they protect.</p>
-</article>
-</div>
-</section>
-<section id="about-me" class="tab-panel personal-paper" role="tabpanel" aria-labelledby="about-me-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Page 03 / The Personal Edition</p>
-<h2>About Me</h2>
-</div>
-<p class="paper-intro">A closer look at the interests, sounds, and people that make up my world beyond the work.</p>
+
+<!-- ===================== ABOUT ME ===================== -->
+<section id="about-me" class="desk" aria-labelledby="about-title" data-title="About Me" tabindex="-1">
+<header class="desk-header">
+<span class="label">Section H &middot; The Personal Edition</span>
+<h2 id="about-title">About Me</h2>
+<p class="dek">A closer look at the interests, sounds, and people that make up my world beyond the work.</p>
+<span class="desk-page">Page H1</span>
+</header>
 <div class="personal-columns">
 <article class="personal-story personal-lead">
-<p class="story-label">Life Outside The Terminal</p>
+<span class="label">Life Outside The Terminal</span>
 <h3>Hobbies</h3>
 <p>When I am away from a screen, I make room for the things that keep me curious, creative, and connected. Hobbies are where I recharge and find new ideas to bring back to my work.</p>
 <ul class="bullet-list">
@@ -283,49 +538,52 @@ content="width=device-width, initial-scale=1.0">
 </ul>
 </article>
 <article class="personal-story">
-<p class="story-label">The Soundtrack</p>
+<span class="label">The Soundtrack</span>
 <h3>All Things Music</h3>
 <p>Music is part of the daily rhythm. I enjoy discovering different sounds, revisiting favorite artists, and letting a good playlist set the tone for the moment.</p>
-<p class="pull-quote">“Every good day needs a soundtrack.”</p>
+<p class="pull-quote">&ldquo;Every good day needs a soundtrack.&rdquo;</p>
 </article>
 <article class="personal-story">
-<p class="story-label">The Home Desk</p>
+<span class="label">The Home Desk</span>
 <h3>Family</h3>
 <p>Family is part of the foundation behind every goal. Their support, perspective, and encouragement keep the big picture in view while I continue building what comes next.</p>
 <p class="family-note">Together is always worth celebrating.</p>
 </article>
 </div>
 </section>
-<section id="music-showcase" class="tab-panel personal-paper" role="tabpanel" aria-labelledby="music-showcase-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Page 04 / Rhythm &amp; Repertoire</p>
-<h2>Rhythm &amp; Repertoire</h2>
-</div>
-<p class="paper-intro">A visual showcase of my work behind the kit.</p>
+
+<!-- ===================== MUSIC ===================== -->
+<section id="music-showcase" class="desk" aria-labelledby="music-title" data-title="Rhythm &amp; Repertoire" tabindex="-1">
+<header class="desk-header">
+<span class="label">Section H &middot; Rhythm &amp; Repertoire</span>
+<h2 id="music-title">Music Showcase</h2>
+<p class="dek">A visual showcase of my work behind the kit.</p>
+<span class="desk-page">Page H2</span>
+</header>
 <div class="performance-gallery">
 <figure class="performance-feature">
-<img src="media/church-drums-01.heic" alt="Andrew Thomas performing on drums" loading="lazy">
-<figcaption><strong>Worship in Motion</strong><span>Drums, rhythm, and musical leadership in service.</span></figcaption>
+<img src="media/church-drums-01.jpg" alt="Andrew Thomas standing on an outdoor stage beside a red drum kit" width="1400" height="1867" loading="lazy">
+<figcaption><strong>On Stage</strong>Drums, rhythm, and musical leadership.</figcaption>
 </figure>
 <figure>
-<img src="media/performance-01.jpg" alt="Andrew Thomas during a live music performance" loading="lazy">
-<figcaption><strong>Live Performance</strong><span>Built for the stage, the room, and the moment.</span></figcaption>
+<img src="media/performance-01-web.jpg" alt="Andrew Thomas smiling behind an electronic drum kit during a live lounge performance with a vocalist" width="1400" height="933" loading="lazy">
+<figcaption><strong>Live Performance</strong>Built for the stage, the room, and the moment.</figcaption>
 </figure>
 <figure>
-<img src="media/performance-02.heic" alt="Andrew Thomas performing with fellow musicians" loading="lazy">
-<figcaption><strong>In the Pocket</strong><span>Collaboration, control, and presence behind the kit.</span></figcaption>
+<img src="media/performance-02.jpg" alt="Andrew Thomas on drums with a band performing on a television studio set" width="1400" height="1050" loading="lazy">
+<figcaption><strong>In the Pocket</strong>Collaboration, control, and presence behind the kit.</figcaption>
 </figure>
 <figure class="performance-video">
-<video controls preload="metadata" poster="media/performance-01.jpg">
+<video controls preload="none" poster="media/performance-01-web.jpg" width="1400" height="933">
 <source src="media/live-performance.mp4" type="video/mp4">
-Your browser does not support video playback.
+Your browser does not support video playback. <a href="media/live-performance.mp4">Download the performance video</a>.
 </video>
-<figcaption><strong>See It in Action</strong><span>A live performance moment from behind the kit.</span></figcaption>
+<figcaption><strong>See It in Action</strong>A live performance moment from behind the kit.</figcaption>
 </figure>
 </div>
 <div class="personal-columns music-details">
 <article class="personal-story personal-lead">
-<p class="story-label">Ministry in Motion</p>
+<span class="label">Ministry in Motion</span>
 <h3>Worship &amp; Production Leadership</h3>
 <p>Raised in worship, I began with percussion, drums, choir, and musical direction. Today I serve as Minister of Music at Greater New St James, leading worship while running sound and AV.</p>
 <ul class="bullet-list">
@@ -335,154 +593,201 @@ Your browser does not support video playback.
 </ul>
 </article>
 <article class="personal-story">
-<p class="story-label">Stage Credits</p>
+<span class="label">Stage Credits</span>
 <h3>Bands &amp; Artists</h3>
 <p>Performed with Sonic Healing, The Cosmic Jaywalkers, Mimi on the Mic, Jade the Ivy, Lauren Hall, and artists across the city.</p>
-<p class="pull-quote">&quot;Bring the pocket. Elevate the room.&quot;</p>
-<a class="visit-button music-link" href="https://cosmicjaywalkers.com/" target="_blank" rel="noreferrer">Explore The Cosmic Jaywalkers <span aria-hidden="true">↗</span></a>
+<p class="pull-quote">&ldquo;Bring the pocket. Elevate the room.&rdquo;</p>
+</article>
+<article class="personal-story">
+<span class="label">Listen In</span>
+<h3>The Cosmic Jaywalkers</h3>
+<p>One of the bands I perform with.</p>
+<div class="btn-row"><a class="btn" href="https://cosmicjaywalkers.com/" target="_blank" rel="noreferrer">Visit The Cosmic Jaywalkers<span class="visually-hidden"> (opens in a new tab)</span></a></div>
 </article>
 </div>
-</section>
-<section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="projects-tab" hidden>
-<div class="section-heading">
-<p class="section-label">Page 02 / Selected Work</p>
-<h2>Tech &amp; Impact</h2>
-</div>
-<article class="project project-card">
-<h3 class="project-title">Cyber//Breach</h3>
-<p class="project-role"><strong>Role:</strong> Creator &mdash; In Progress</p>
-<p class="project-summary">A basic cybersecurity education game that helps players understand the fundamentals of internet security through hands-on play.</p>
-<div class="project-tech-stack">
-<span class="tech-tag">Cybersecurity Education</span>
-<span class="tech-tag">Game Design</span>
-</div>
-</article>
-<article class="project project-card">
-<h3 class="project-title">Planetary Responsibility</h3>
-<p class="project-role"><strong>Role:</strong> Creator &mdash; In Progress</p>
-<p class="project-summary"><a class="visit-button" href="https://athomas-ui.github.io/Planetary-Responsiblity/" target="_blank" rel="noreferrer">View Project <span aria-hidden="true">↗</span></a></p>
-</article>
-</section>
-<div class="drum-stage" aria-label="Interactive drum kit">
-<div class="stage-lights" aria-hidden="true"></div>
+
+<section class="drum-stage" aria-labelledby="drum-title">
 <div class="drum-heading">
-<p class="eyebrow">After hours</p>
-<p class="drum-status" aria-live="polite">Ready to make some noise.</p>
+<div>
+<span class="label">After Hours</span>
+<h3 id="drum-title">Sit In on the Kit</h3>
+<p>Click a pad or press A, S, D, F. Sound stays off until you turn it on.</p>
+</div>
+<button class="btn sound-toggle" type="button" aria-pressed="false">Sound: Off</button>
 </div>
 <div class="drum-kit">
-<button class="drum-pad pad-kick" data-sound="KICK" aria-label="Kick drum, press A">A<span>Kick</span></button>
-<button class="drum-pad pad-snare" data-sound="SNARE" aria-label="Snare drum, press S">S<span>Snare</span></button>
-<button class="drum-pad pad-hat" data-sound="HAT" aria-label="Hi-hat, press D">D<span>Hi-hat</span></button>
-<button class="drum-pad pad-crash" data-sound="CRASH" aria-label="Crash cymbal, press F">F<span>Crash</span></button>
+<button class="drum-pad pad-kick" type="button" data-sound="kick" aria-label="Kick drum (key A)">A<span>Kick</span></button>
+<button class="drum-pad pad-snare" type="button" data-sound="snare" aria-label="Snare drum (key S)">S<span>Snare</span></button>
+<button class="drum-pad pad-hat" type="button" data-sound="hat" aria-label="Hi-hat (key D)">D<span>Hi-hat</span></button>
+<button class="drum-pad pad-crash" type="button" data-sound="crash" aria-label="Crash cymbal (key F)">F<span>Crash</span></button>
 </div>
-<p class="hit-count"><span id="hit-count">0</span> hits powered up</p>
-</div>
+<p class="drum-status" aria-live="polite">Ready when you are.</p>
+<p class="hit-count"><span id="hit-count">0</span> hits</p>
+</section>
+</section>
+
 </main>
-<footer>
-<a class="visit-button footer-contact" href="mailto:athomas@icstars.org">Email Me <span aria-hidden="true">↗</span></a>
-<p>&copy; 2026 Andrew Thomas
-</p>
+
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<p class="footer-title">The Andrew Thomas Daily</p>
+<ul class="footer-links">
+<li><a href="#front">Back to the front page</a></li>
+<li><a href="mailto:athomas@icstars.org">Email</a></li>
+<li><a href="https://www.linkedin.com/in/andrew-thomas-83564259" target="_blank" rel="noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+<li><a href="https://github.com/athomas-ui" target="_blank" rel="noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+</ul>
+</div>
+<p class="meta">&copy; 2026 Andrew Thomas &middot; Published in Chicago, IL</p>
+</div>
 </footer>
+
 <script>
-const tabs = document.querySelectorAll('[role="tab"]');
-const panels = document.querySelectorAll('[role="tabpanel"]');
-const drumPads = document.querySelectorAll('.drum-pad');
-const drumStatus = document.querySelector('.drum-status');
-const hitCount = document.querySelector('#hit-count');
-let totalHits = 0;
+/* ---------- Section routing ----------
+   Each section (".desk") has an id. The URL hash picks which one shows,
+   so #technology opens the Technology Desk and the Back button works.
+   Old links from the previous version still land in the right place. */
+const desks = [...document.querySelectorAll('.desk')];
+const navLinks = [...document.querySelectorAll('.desk-nav a')];
+const aliases = { overview: 'front', projects: 'technology', skills: 'technology' };
+const siteName = 'The Andrew Thomas Daily';
 
-function activateTab(tabName, updateHash = true) {
-	tabs.forEach((tab) => {
-		const isActive = tab.dataset.tab === tabName;
-		tab.classList.toggle('is-active', isActive);
-		tab.setAttribute('aria-selected', isActive);
-		tab.tabIndex = isActive ? 0 : -1;
-	});
-
-	panels.forEach((panel) => {
-		panel.hidden = panel.id !== tabName;
-	});
-
-	if (updateHash) {
-		history.replaceState(null, '', `#${tabName}`);
-	}
-
-	document.querySelectorAll('.tab-track.is-open').forEach((track) => {
-		track.classList.remove('is-open');
-		track.querySelector('.track-toggle').setAttribute('aria-expanded', 'false');
-	});
+function findTarget(hash) {
+	const id = aliases[hash] || hash;
+	const target = id && document.getElementById(id);
+	if (!target) return { desk: desks[0], anchor: null };
+	if (target.classList.contains('desk')) return { desk: target, anchor: null };
+	// A hash can also point inside a desk (like #cyber-breach) or outside all of them
+	// (like the #main skip link), which keeps whichever desk is already open.
+	const current = desks.find((d) => d.classList.contains('is-active')) || desks[0];
+	return { desk: target.closest('.desk') || current, anchor: target };
 }
 
-tabs.forEach((tab, index) => {
-	tab.addEventListener('click', () => activateTab(tab.dataset.tab));
-	tab.addEventListener('keydown', (event) => {
-		if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
-		event.preventDefault();
-		const nextIndex = event.key === 'ArrowRight'
-			? (index + 1) % tabs.length
-			: (index - 1 + tabs.length) % tabs.length;
-		tabs[nextIndex].focus();
-		activateTab(tabs[nextIndex].dataset.tab);
-	});
-});
+function showDesk(hash, moveFocus) {
+	const { desk, anchor } = findTarget(hash);
 
-document.querySelectorAll('.track-toggle').forEach((toggle) => {
-	toggle.addEventListener('click', () => {
-		const track = toggle.closest('.tab-track');
-		const wasOpen = track.classList.contains('is-open');
-
-		document.querySelectorAll('.tab-track.is-open').forEach((openTrack) => {
-			openTrack.classList.remove('is-open');
-			openTrack.querySelector('.track-toggle').setAttribute('aria-expanded', 'false');
-		});
-
-		if (!wasOpen) {
-			track.classList.add('is-open');
-			toggle.setAttribute('aria-expanded', 'true');
+	desks.forEach((d) => d.classList.toggle('is-active', d === desk));
+	navLinks.forEach((link) => {
+		if (link.hash === `#${desk.id}`) {
+			link.setAttribute('aria-current', 'page');
+			link.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+		} else {
+			link.removeAttribute('aria-current');
 		}
 	});
+	document.title = desk.id === 'front' ? `${siteName} | Cybersecurity & GRC Portfolio` : `${desk.dataset.title} | ${siteName}`;
+
+	if (!moveFocus) return;
+	if (anchor) {
+		anchor.scrollIntoView();
+		return;
+	}
+	// Bring the new section into view and move keyboard/screen-reader focus to it.
+	const navHeight = document.querySelector('.desk-nav').offsetHeight;
+	const top = document.querySelector('main').getBoundingClientRect().top + window.scrollY - navHeight;
+	if (window.scrollY > top) window.scrollTo(0, top);
+	desk.focus({ preventScroll: true });
+}
+
+window.addEventListener('hashchange', () => showDesk(location.hash.slice(1), true));
+showDesk(location.hash.slice(1), false);
+if (location.hash) {
+	const { anchor } = findTarget(location.hash.slice(1));
+	if (anchor) anchor.scrollIntoView();
+}
+
+document.getElementById('edition-date').textContent = new Date().toLocaleDateString('en-US', {
+	weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
 });
 
-document.addEventListener('click', (event) => {
-	if (event.target.closest('.tab-track')) return;
-	document.querySelectorAll('.tab-track.is-open').forEach((track) => {
-		track.classList.remove('is-open');
-		track.querySelector('.track-toggle').setAttribute('aria-expanded', 'false');
-	});
+/* ---------- Drum kit ----------
+   Sound is synthesized with the Web Audio API (no audio files to download)
+   and only plays after the visitor turns it on. */
+const drumPads = [...document.querySelectorAll('.drum-pad')];
+const drumStatus = document.querySelector('.drum-status');
+const hitCount = document.getElementById('hit-count');
+const soundToggle = document.querySelector('.sound-toggle');
+const musicDesk = document.getElementById('music-showcase');
+let totalHits = 0;
+let audio = null;
+
+soundToggle.addEventListener('click', () => {
+	const on = soundToggle.getAttribute('aria-pressed') !== 'true';
+	soundToggle.setAttribute('aria-pressed', on);
+	soundToggle.textContent = on ? 'Sound: On' : 'Sound: Off';
+	if (on && !audio) audio = new (window.AudioContext || window.webkitAudioContext)();
+	if (on && audio.state === 'suspended') audio.resume();
 });
 
-document.addEventListener('keydown', (event) => {
-	if (event.key !== 'Escape') return;
-	document.querySelectorAll('.tab-track.is-open').forEach((track) => {
-		track.classList.remove('is-open');
-		track.querySelector('.track-toggle').setAttribute('aria-expanded', 'false');
-	});
-});
+function noise(seconds) {
+	const buffer = audio.createBuffer(1, audio.sampleRate * seconds, audio.sampleRate);
+	const data = buffer.getChannelData(0);
+	for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+	const source = audio.createBufferSource();
+	source.buffer = buffer;
+	return source;
+}
 
-const initialTab = window.location.hash.slice(1);
-activateTab([...tabs].some((tab) => tab.dataset.tab === initialTab) ? initialTab : 'overview', false);
+function envelope(peak, seconds) {
+	const gain = audio.createGain();
+	const now = audio.currentTime;
+	gain.gain.setValueAtTime(peak, now);
+	gain.gain.exponentialRampToValueAtTime(0.001, now + seconds);
+	gain.connect(audio.destination);
+	return gain;
+}
+
+const sounds = {
+	kick() {
+		const osc = audio.createOscillator();
+		osc.frequency.setValueAtTime(150, audio.currentTime);
+		osc.frequency.exponentialRampToValueAtTime(40, audio.currentTime + 0.3);
+		osc.connect(envelope(0.9, 0.35));
+		osc.start(); osc.stop(audio.currentTime + 0.35);
+	},
+	snare() {
+		const hiss = noise(0.2);
+		const filter = audio.createBiquadFilter();
+		filter.type = 'highpass'; filter.frequency.value = 1500;
+		hiss.connect(filter).connect(envelope(0.5, 0.2));
+		hiss.start();
+	},
+	hat() {
+		const hiss = noise(0.06);
+		const filter = audio.createBiquadFilter();
+		filter.type = 'highpass'; filter.frequency.value = 7000;
+		hiss.connect(filter).connect(envelope(0.35, 0.06));
+		hiss.start();
+	},
+	crash() {
+		const hiss = noise(1.2);
+		const filter = audio.createBiquadFilter();
+		filter.type = 'highpass'; filter.frequency.value = 4000;
+		hiss.connect(filter).connect(envelope(0.35, 1.2));
+		hiss.start();
+	}
+};
 
 function playDrum(pad) {
 	pad.classList.remove('is-hit');
-	void pad.offsetWidth;
+	void pad.offsetWidth; // restart the hit animation
 	pad.classList.add('is-hit');
 	totalHits += 1;
 	hitCount.textContent = totalHits;
-	drumStatus.textContent = `${pad.dataset.sound} hit! Keep the beat heroic.`;
+	drumStatus.textContent = `${pad.querySelector('span').textContent} hit.`;
+	if (audio && soundToggle.getAttribute('aria-pressed') === 'true') sounds[pad.dataset.sound]();
 }
 
-drumPads.forEach((pad) => {
-	pad.addEventListener('click', () => playDrum(pad));
-});
+drumPads.forEach((pad) => pad.addEventListener('click', () => playDrum(pad)));
 
 document.addEventListener('keydown', (event) => {
-	if (event.target.matches('input, textarea, button, a')) return;
-	const keyMap = { a: 0, s: 1, d: 2, f: 3 };
-	const pad = drumPads[keyMap[event.key.toLowerCase()]];
-	if (!pad) return;
-	playDrum(pad);
+	if (!musicDesk.classList.contains('is-active')) return;
+	if (event.ctrlKey || event.metaKey || event.altKey || event.repeat) return;
+	if (event.target.closest('input, textarea, select, [contenteditable]')) return;
+	const pad = drumPads['asdf'.indexOf(event.key.toLowerCase())];
+	if (pad) playDrum(pad);
 });
 </script>
 </body>
 </html>
-

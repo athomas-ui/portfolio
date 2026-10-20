@@ -20,31 +20,30 @@ portfolio/
 ├── index.html      # All page content and markup
 ├── style.css       # All styling, design tokens, responsive rules
 ├── resume.txt       # Plain-text resume source
-└── media/          # Performance photos/video for the Music Showcase
+└── media/          # Profile photo, performance photos (web-sized JPGs), and video
 ```
 
 ## Features
 
 **Navigation**
-- Tabbed layout (`role="tablist"` / `role="tab"` / `role="tabpanel"`) grouped into three tracks: Professional, Program Journey, Personal
-- Keyboard navigation between tabs with the arrow keys
-- Active tab reflected in the URL hash, so a link can drop someone directly into a section
-- `aria-selected` and `hidden` attributes managed in JS to keep the tab state accessible
+- Newspaper masthead plus a sticky, always-visible section bar (scrolls sideways on phones)
+- Every section has its own URL hash (`#leadership`, `#technology`, ...), so links open straight to a desk and the browser Back button works
+- Old links from v1 (`#overview`, `#projects`, `#skills`) still land on the right section
+- Without JavaScript, every section simply shows on one long page
 
 **Content sections**
-- **Overview** — the career narrative in three parts (main story, current focus, what's next)
+- **Front Page** — lead story, featured project, an index of the five C60 desks, and a "Position Wanted" classified with contact links
+- **Leadership / Business / Technology / Career Planning / Wellness** — the five required C60 desks
+- **Technology Desk** — project case studies (Cyber//Breach, Encourage), skills, and tools
+- **Career Desk** — career timeline and certification roadmap (earned / in progress / planned)
 - **Resume** — certifications, skills, tools, full work history, education
-- **Projects** — case study writeups (currently: the i.c.stars Cycle 60 client consulting project)
-- **Skills** — evidence-based skill categories (Security & Risk, Operations, Tools)
-- **Leadership / Business / Career Planning / Wellness** — the "Program Journey" story told through i.c.stars
-- **About Me** — hobbies, music, family
-- **Music Showcase** — photo/video gallery plus an **interactive drum kit** (click or press A/S/D/F to hit kick/snare/hi-hat/crash, with a live hit counter and `aria-live` status updates)
+- **About Me** and **Music Showcase** — photo/video gallery plus an **interactive drum kit** (click or press A/S/D/F; sound is synthesized with the Web Audio API and stays off until the visitor turns it on)
 
 **Accessibility**
-- Semantic landmarks (`header`, `nav`, `main`, `footer`)
-- ARIA labels on icon-only and interactive elements
-- Live region (`aria-live="polite"`) on the drum kit status text
-- Keyboard support throughout (tabs and drum pads both work without a mouse)
+- Semantic landmarks, one `h1`, and no skipped heading levels
+- Skip link, visible focus outlines, and `aria-current` on the active section
+- Expandable stories use native `<details>`, so they work with keyboard and screen readers
+- Respects `prefers-reduced-motion`
 
 ## Running Locally
 
