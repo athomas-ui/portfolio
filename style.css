@@ -408,6 +408,8 @@ figcaption strong { color: var(--ink); }
 .project-aside { padding-left: var(--space-5); border-left: 1px solid var(--rule); }
 .project-aside h4 { margin-bottom: var(--space-2); font-family: var(--font-body); font-size: var(--step--1); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .project-aside > * + h4 { margin-top: var(--space-5); }
+.project-aside .project-thumb { margin: 0 0 var(--space-4); }
+.project-aside > .project-thumb + h4 { margin-top: 0; }
 .project-aside .btn { width: 100%; }
 .project-aside .btn + .btn { margin-top: var(--space-2); }
 .tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0; list-style: none; }
