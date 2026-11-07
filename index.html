@@ -294,21 +294,21 @@
 <article class="project-feature" id="cyber-breach">
 <div class="project-top">
 <span class="label">Project Spotlight</span>
-<span class="status status-progress">In progress &middot; playable prototype</span>
+<span class="status status-progress">In progress &middot; core loop proven</span>
 </div>
 <h3>Cyber//Breach</h3>
-<p class="dek">A basic cybersecurity training game that helps people understand the fundamentals of internet security by making decisions, not just reading about them.</p>
+<p class="dek">A cybersecurity training game that forces real decisions under pressure instead of passive reading, teaching players to spot threats like phishing by making the call themselves.</p>
 <div class="project-grid">
 <dl class="qa">
-<div><dt>Objective</dt><dd>Teach security basics such as spotting a phishing email through short missions where the right call earns XP and a higher rank.</dd></div>
-<div><dt>My role</dt><dd>Creator and developer: game design, front-end code, testing, and documentation.</dd></div>
+<div><dt>Objective</dt><dd>Drill security fundamentals, starting with phishing detection, through short missions where the right call earns XP and climbs the player&#39;s rank.</dd></div>
+<div><dt>My role</dt><dd>Sole creator and developer: designed the game, engineered every line of front-end code, tested each build, and documented the process.</dd></div>
 <div><dt>What works today</dt><dd><ul>
-<li>Character selection, then a player card that tracks rank, XP, and missions completed out of five.</li>
-<li>Mission 01, &ldquo;The Bait,&rdquo; a phishing scenario with four possible responses.</li>
-<li>An answer-checking engine that compares the player&#39;s choice to an answer key, shows feedback on the page, and adds 50 XP per correct answer.</li>
-<li>Answer locking after the first click, so XP cannot be farmed by re-clicking.</li>
+<li>A character-selection flow feeding into a player card that tracks rank, XP, and missions completed out of five.</li>
+<li>Mission 01, &ldquo;The Bait,&rdquo; a realistic phishing scenario with four response options.</li>
+<li>A hand-built answer-checking engine that validates the player&#39;s choice against an answer key, delivers live feedback, and awards 50 XP per correct call.</li>
+<li>Answer-locking after the first click, shutting down XP farming for good.</li>
 </ul></dd></div>
-<div><dt>What I learned</dt><dd>Verifying logic with hand-checked math instead of assumptions, and using clear variable names so nested loops stay readable.</dd></div>
+<div><dt>What I learned</dt><dd>Validating logic with hand-checked math instead of assumptions, and naming variables precisely so nested loops stay readable under pressure.</dd></div>
 </dl>
 <aside class="project-aside" aria-label="Project details">
 <h4>Built with</h4>
@@ -323,19 +323,19 @@
 <div class="expand-body">
 <h4>Week 1</h4>
 <ol>
-<li>Built a real answer-checking engine that compares the chosen answer against an answer key instead of just logging picks.</li>
-<li>Wired live feedback onto the mission screen, with separate messages for correct and incorrect answers.</li>
-<li>Connected XP to the decision engine: read the number from the page, converted it to real math, and added 50 points per correct answer.</li>
+<li>Engineered a real answer-checking engine that validates the chosen answer against an answer key instead of just logging picks.</li>
+<li>Wired live feedback directly onto the mission screen, correct and incorrect answers each surfacing their own message.</li>
+<li>Connected XP to the decision engine end to end: pulled the number from the DOM, ran the math, and added 50 points per correct call.</li>
 <li>Proved the engine with hand-checked math, confirming the final XP matched exactly what four correct clicks should produce.</li>
 </ol>
 <h4>Week 2</h4>
 <ol>
-<li>Locked each question after one answer so XP can&#39;t be farmed by re-clicking.</li>
-<li>Proved the lock works on both outcomes: buttons freeze visually and functionally either way.</li>
+<li>Locked every question after one answer, shutting down XP farming for good.</li>
+<li>Proved the lock holds on both outcomes: buttons freeze visually and functionally whether the answer is right or wrong.</li>
 <li>Learned and applied variable shadowing, keeping loop names separate so nested code stays readable.</li>
 </ol>
 <h4>Next</h4>
-<p>The player card is already built to track five missions; the next step is building the missions after Mission 01.</p>
+<p>The player card already tracks five missions. Next up: building Missions 02 through 05 to fill it out.</p>
 </div>
 </details>
 </article>
@@ -365,6 +365,54 @@
 <a class="btn" href="https://github.com/athomas-ui/Planetary-Responsiblity" target="_blank" rel="noreferrer">View the code<span class="visually-hidden"> (opens in a new tab)</span></a>
 </aside>
 </div>
+</article>
+
+<article class="project-feature" id="cue-sync">
+<div class="project-top">
+<span class="label">Project Spotlight</span>
+<span class="status status-progress">In progress &middot; live read-only demo</span>
+</div>
+<h3>CueSync</h3>
+<p class="dek">Music coordination software for worship leaders, band leaders, choir directors, and ensemble managers, so the same setlist and contact details stop getting retyped into a text or email every single week.</p>
+<div class="project-grid">
+<dl class="qa">
+<div><dt>Objective</dt><dd>Let a leader enter an event, its band, and its setlist once and reuse that information everywhere, instead of rebuilding it from scratch for every rehearsal and show.</dd></div>
+<div><dt>My role</dt><dd>Sole creator and developer: data modeling, full-stack build, security design, deployment, and documentation.</dd></div>
+<div><dt>What works today</dt><dd><ul>
+<li>A full data model covering workspaces, groups, contacts, songs, events, setlists, messages, and an audit log.</li>
+<li>Read-only events and ordered setlists, live on the demo site.</li>
+<li>A music library of saved songs linked to recordings, charts, and authorized lyrics sources.</li>
+<li>Groups that let one musician sit in multiple ensembles, Worship Team, Choir, Live Band, without duplicate contact records.</li>
+<li>Deployed live on Vercel with a hosted Postgres database, auto-deploying on every push to main.</li>
+</ul></dd></div>
+<div><dt>Security design</dt><dd>Workspace isolation enforced at the database level with composite foreign keys, so one workspace&#39;s data cannot reference another&#39;s even on an application bug, blocking a whole class of IDOR vulnerabilities before they can happen. Every read and write also routes through one server-side authorization check, and all input is validated with Zod on the server, not just trusted from the browser.</dd></div>
+<div><dt>What I learned</dt><dd>Designing for multi-tenant security from day one: enforcing workspace boundaries in the schema itself instead of trusting application code to remember to check every time.</dd></div>
+</dl>
+<aside class="project-aside" aria-label="Project details">
+<h4>Built with</h4>
+<ul class="tag-list"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>PostgreSQL</li><li>Prisma</li><li>Zod</li><li>Vercel</li></ul>
+<h4>Evidence</h4>
+<a class="btn btn-primary" href="https://cue-sync.vercel.app" target="_blank" rel="noreferrer">View the live demo<span class="visually-hidden"> (opens in a new tab)</span></a>
+<a class="btn" href="https://github.com/athomas-ui/CueSync" target="_blank" rel="noreferrer">View the code<span class="visually-hidden"> (opens in a new tab)</span></a>
+</aside>
+</div>
+<details class="expand">
+<summary>Open the roadmap</summary>
+<div class="expand-body">
+<h4>Done</h4>
+<ol>
+<li>Built the full data model: workspaces, groups, contacts, songs, events, setlists, messages, and an audit log.</li>
+<li>Shipped read-only events, setlists, groups, and the music library on the live demo.</li>
+<li>Deployed to Vercel with a hosted Prisma Postgres database and zero npm audit findings.</li>
+</ol>
+<h4>Next</h4>
+<ol>
+<li>Sign-in and per-user workspaces, with workspace-isolation tests proving the boundary holds.</li>
+<li>Create and edit for events, setlists, groups, and members, not just read-only views.</li>
+<li>A show checklist with due dates planned backward from show day, and a platform-aware message builder that drafts the text but never sends without the leader&#39;s confirmation.</li>
+</ol>
+</div>
+</details>
 </article>
 
 <h3 class="subsection-title">Skills &amp; Tools</h3>
