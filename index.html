@@ -90,8 +90,8 @@
 <div>
 <span class="label">Featured &middot; The Technology Desk</span>
 <h2>Cyber//Breach Turns Security Basics Into a Game</h2>
-<p class="dek">A browser game where players step into the role of a junior security officer and earn XP by making the right call on real-world threats like phishing.</p>
-<p>Andrew is building it from scratch in HTML, CSS, and JavaScript, one mission at a time, and documenting each week of progress in the project's public repository.</p>
+<p class="dek">A 3D browser game where players patrol a neon security district and earn XP by making the right call on real-world threats like phishing, tailgating, and pretexting.</p>
+<p>Andrew started with a plain HTML, CSS, and JavaScript prototype, then rebuilt it as a 3D world in React and three.js, documenting the progress in the project's public repository.</p>
 <div class="btn-row">
 <a class="btn btn-primary" href="https://athomas-ui.github.io/cyber-breach-quest/" target="_blank" rel="noreferrer">Play the game<span class="visually-hidden"> (opens in a new tab)</span></a>
 <a class="btn" href="#cyber-breach">Read the case study</a>
@@ -99,20 +99,19 @@
 </div>
 <figure aria-labelledby="mission-caption">
 <div class="mission-excerpt">
-<p class="mx-title">Mission 01: The Bait</p>
+<p class="mx-title">Mission 1: The Bait</p>
 <dl>
-<dt>FROM</dt><dd>security@micr0soft-support.com</dd>
-<dt>SUBJECT</dt><dd>Urgent: Account Suspension</dd>
+<dt>FROM</dt><dd>it-support@micros0ft-helpdesk.com</dd>
+<dt>SUBJECT</dt><dd>Urgent: your mailbox closes in 2 hours</dd>
 </dl>
-<p>Your account will be permanently suspended if the issue is not resolved within 30 minutes. Verify your account immediately.</p>
+<p>We detected unusual activity. Re-enter your password at the secure link below or lose all mail access permanently.</p>
 <ul>
-<li>A. Open the link</li>
-<li class="mx-correct">B. Report phishing <span class="visually-hidden">(correct answer)</span></li>
-<li>C. Forward to a coworker</li>
-<li>D. Reply to the sender</li>
+<li>SAFE</li>
+<li class="mx-correct">PHISH <span class="visually-hidden">(correct answer)</span></li>
 </ul>
+<p class="mx-note">A zero swapped for the letter o, plus a two-hour deadline to stop you checking.</p>
 </div>
-<figcaption id="mission-caption">Text from Mission 01 of the Cyber//Breach prototype. The highlighted answer earns XP.</figcaption>
+<figcaption id="mission-caption">An email from Mission 1 of Cyber//Breach, where players sort a flooded inbox into SAFE or PHISH. The highlighted call earns XP.</figcaption>
 </figure>
 </article>
 
@@ -302,21 +301,22 @@
 <div class="project-grid">
 <dl class="qa">
 <div><dt>Objective</dt><dd>Drill security fundamentals, starting with phishing detection, through short missions where the right call earns XP and climbs the player&#39;s rank.</dd></div>
-<div><dt>My role</dt><dd>Sole creator and developer: designed the game, engineered every line of front-end code, tested each build, and documented the process.</dd></div>
+<div><dt>My role</dt><dd>Sole creator: designed the game, wrote all of the security content, and built it with AI-assisted development, reviewing and testing every change in the browser.</dd></div>
 <div><dt>What works today</dt><dd><ul>
-<li>A character-selection flow feeding into a player card that tracks rank, XP, and missions completed out of five.</li>
-<li>Mission 01, &ldquo;The Bait,&rdquo; a realistic phishing scenario with four response options.</li>
-<li>A hand-built answer-checking engine that validates the player&#39;s choice against an answer key, delivers live feedback, and awards 50 XP per correct call.</li>
-<li>Answer-locking after the first click, shutting down XP farming for good.</li>
+<li>A 3D Security District hub to explore, with contacts who teach evil-twin Wi-Fi, USB drops, password sharing, and checking sender domains.</li>
+<li>Stranger encounters: at random, someone walks up and tries tailgating, a fake IT tech asking for your password and MFA code, or a &ldquo;new hire&rdquo; asking to use your laptop.</li>
+<li>Mission 1, &ldquo;The Bait,&rdquo; where players sort a flooded inbox into SAFE or PHISH, with an explanation after every call.</li>
+<li>A boss fight, The Lure King, where players report real phishing hooks inside a seven-second window.</li>
+<li>Progression through XP, ranks from Rookie to Architect, badges, an intel codex, and a tablet menu, all saved in the browser with no account needed.</li>
 </ul></dd></div>
-<div><dt>What I learned</dt><dd>Validating logic with hand-checked math instead of assumptions, and naming variables precisely so nested loops stay readable under pressure.</dd></div>
+<div><dt>What I learned</dt><dd>Keeping game content separate from the engine, so a new phishing email or stranger trick is a data entry instead of new code; scoping to one polished mission over five unfinished ones; and reviewing AI-assisted code instead of trusting it.</dd></div>
 </dl>
 <aside class="project-aside" aria-label="Project details">
 <figure class="project-thumb">
-<img src="media/cyberbreach-thumb.png" alt="Cyber//Breach mission screen: a phishing email from a lookalike support address, four response options, and a confirmed correct answer" width="1200" height="496" loading="lazy">
+<img src="media/cyberbreach-game.png" alt="Cyber//Breach gameplay: the player's character in a neon 3D hub after shutting down a physical-access attack, with a feedback panel awarding 15 XP and listing red flags like a sympathy story and name-dropping a manager" width="960" height="540" loading="lazy">
 </figure>
 <h4>Built with</h4>
-<ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git &amp; GitHub</li><li>GitHub Pages</li></ul>
+<ul class="tag-list"><li>React</li><li>Vite</li><li>three.js</li><li>React Three Fiber</li><li>Tailwind CSS</li><li>Web Audio API</li><li>Git &amp; GitHub</li><li>GitHub Pages</li></ul>
 <h4>Evidence</h4>
 <a class="btn btn-primary" href="https://athomas-ui.github.io/cyber-breach-quest/" target="_blank" rel="noreferrer">Play the game<span class="visually-hidden"> (opens in a new tab)</span></a>
 <a class="btn" href="https://github.com/athomas-ui/cyber-breach-quest" target="_blank" rel="noreferrer">View the code<span class="visually-hidden"> (opens in a new tab)</span></a>
@@ -325,21 +325,27 @@
 <details class="expand">
 <summary>Open the build log</summary>
 <div class="expand-body">
-<h4>Week 1</h4>
+<h4>Prototype, week 1</h4>
 <ol>
 <li>Engineered a real answer-checking engine that validates the chosen answer against an answer key instead of just logging picks.</li>
 <li>Wired live feedback directly onto the mission screen, correct and incorrect answers each surfacing their own message.</li>
 <li>Connected XP to the decision engine end to end: pulled the number from the DOM, ran the math, and added 50 points per correct call.</li>
 <li>Proved the engine with hand-checked math, confirming the final XP matched exactly what four correct clicks should produce.</li>
 </ol>
-<h4>Week 2</h4>
+<h4>Prototype, week 2</h4>
 <ol>
 <li>Locked every question after one answer, shutting down XP farming for good.</li>
 <li>Proved the lock holds on both outcomes: buttons freeze visually and functionally whether the answer is right or wrong.</li>
 <li>Learned and applied variable shadowing, keeping loop names separate so nested code stays readable.</li>
 </ol>
+<h4>The 3D rebuild</h4>
+<ol>
+<li>Rebuilt the game in React and three.js, with every character and building made from code-generated geometry and all music and sound synthesized live in the browser.</li>
+<li>Moved every email, conversation, and stranger scenario into one data file, so adding content never means touching the engine.</li>
+<li>Added stranger encounters, the Lure King boss fight, and local-first saves.</li>
+</ol>
 <h4>Next</h4>
-<p>The player card already tracks five missions. Next up: building Missions 02 through 05 to fill it out.</p>
+<p>Four more mission gates are already visible in the hub: Locksmith (passwords and MFA), The Imposter (social engineering), Infected (malware), and Lockdown (ransomware and incident response).</p>
 </div>
 </details>
 </article>
