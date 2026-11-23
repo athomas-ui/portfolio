@@ -364,6 +364,7 @@ figcaption strong { color: var(--ink); }
 .story > p + p { margin-top: var(--space-3); }
 .story-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: var(--space-6); }
 .story-split h3 { margin-top: var(--space-2); }
+.story-logo { display: block; width: 100%; max-width: 220px; height: auto; margin: var(--space-4) 0; mix-blend-mode: multiply; }
 
 .quote-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); margin-top: var(--space-5); }
 .quote-grid blockquote {
